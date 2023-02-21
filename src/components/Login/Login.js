@@ -8,7 +8,14 @@ const Login = () => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(togglePass.current)
+    }
+    function handleClick() {
+        togglePass.current.classList.toggle('active');
+        if (togglePass.current.type === 'password') {
+            togglePass.current.type = 'text';
+        } else {
+            togglePass.current.type = 'password';
+        };
     }
 
     return (
@@ -27,17 +34,19 @@ const Login = () => {
                     </label>
                     <input type="email" id="email" name='email' placeholder='Enter your email' autoComplete='off' />
 
-                    <label htmlFor="password">
-                        Password
-                        <span className="open_pass"></span>
-                    </label>
-                    <input
-                        type="password"
-                        id="password"
-                        name='password' placeholder='Enter your password'
-                        autoComplete='off'
-                        ref={togglePass}
-                    />
+                    <div className='pass'>
+                        <label htmlFor="password">
+                            Password
+                        </label>
+                        <span className="open_pass" onClick={handleClick}></span>
+                        <input
+                            type="password"
+                            id="password"
+                            name='password' placeholder='Enter your password'
+                            autoComplete='off'
+                            ref={togglePass}
+                        />
+                    </div>
 
                     <a href="#">
                         Don't have an account?

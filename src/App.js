@@ -10,8 +10,8 @@ function App() {
         window
       </a> */}
 
-      {/* <Register /> */}
-      <Login />
+      <Register />
+      {/* <Login /> */}
     </div>
   );
 }

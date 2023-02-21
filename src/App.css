@@ -40,7 +40,7 @@ body {
 }
 .auth_container header img {
 	width: 100%;
-	max-width: 100px;
+	max-width: 120px;
 }
 .auth_container main {
 	padding: 0 2em;
@@ -93,13 +93,26 @@ input::placeholder {
 	font-weight: 900;
 	color: #0000004d;
 }
+.auth_container .pass {
+    position: relative;
+}
+.pass span.open_pass {
+    position: absolute;
+    right: 5.3%;
+    top: 55%;
+    background-color: #00000001;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 .auth_container form input[type="password"] {
     background-image: url('./assets/images/mdi_password-outline.png'), url('./assets/images/eye_closed.svg');
     background-color: white;
     background-repeat: no-repeat;
     background-position: 5%, 95%;
 }
-.auth_container form input[type="password"].active {
+.auth_container form input[type="text"].active {
     background-image: url('./assets/images/mdi_password-outline.png'), url('./assets/images/eye_open.svg');
     background-color: white;
     background-repeat: no-repeat;
