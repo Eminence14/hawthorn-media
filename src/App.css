@@ -1,0 +1,200 @@
+:root {
+	--primary: #1d1206;
+	--secondary: #f5ba31;
+	--red: #eb1717;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	background: 0;
+	font-size: 14px;
+	border: none;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+@font-face {
+	font-family: Bodoni;
+	src: url("./assets/fonts/BodoniModa.ttf");
+}
+
+body {
+	font-family: Bodoni, serif;
+	font-size: 16px;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+/*######## Login and Register Styles ########*/
+.auth_container {
+	background-color: var(--primary);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.auth_container header img {
+	width: 100%;
+	max-width: 100px;
+}
+.auth_container main {
+	padding: 0 2em;
+	width: 100%;
+	max-width: 500px;
+}
+.auth_container section span {
+	display: block;
+}
+.auth_container section span:nth-child(1) {
+	font-size: 20px;
+	font-weight: 900;
+	color: var(--secondary);
+}
+.auth_container section span:nth-child(2) {
+	font-size: 16px;
+}
+.auth_container form {
+	margin-top: 20px;
+}
+.auth_container form label {
+	font-weight: bold;
+}
+.auth_container form label::after {
+	content: "*";
+	color: var(--red);
+	font-size: 0.9em;
+	position: relative;
+	bottom: 2px;
+}
+.auth_container form input {
+	background-color: white;
+	padding: 1em;
+	display: block;
+	margin: 0.5em 0 1em;
+	width: 100%;
+	border: 1px solid var(--secondary);
+	border-radius: 10px;
+	outline: 0;
+	background-size: 20px;
+	padding-left: 3.5em;
+	font-family: Bodoni, serif;
+	font-size: 1.2em;
+}
+.auth_container form input[type="email"] {
+	background: white url("./assets/images/ic_outline-email.png") 5% no-repeat;
+}
+input::placeholder {
+	font-family: Bodoni, serif;
+	font-weight: 900;
+	color: #0000004d;
+}
+.auth_container form input[type="password"] {
+    background-image: url('./assets/images/mdi_password-outline.png'), url('./assets/images/eye_closed.svg');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 5%, 95%;
+}
+.auth_container form input[type="password"].active {
+    background-image: url('./assets/images/mdi_password-outline.png'), url('./assets/images/eye_open.svg');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 5%, 95%;
+}
+.auth_container form a {
+	color: white;
+}
+.auth_container form a:hover,
+.pass_options .forget:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.auth_container form a span {
+	color: var(--secondary);
+}
+.auth_container form button {
+	background-color: var(--secondary);
+	color: var(--primary);
+	font-family: Bodoni;
+	font-weight: bold;
+	display: block;
+	width: 220px;
+	margin: 2em auto 0;
+	border-radius: 10px;
+	padding: 0.6em 0;
+	cursor: pointer;
+}
+.pass_options {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1em;
+}
+.auth_container form .remember label,
+.pass_options .forget {
+	font-weight: bold;
+}
+.auth_container .remember {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+}
+.remember *,
+.pass_options .forget {
+	cursor: pointer;
+}
+.remember input#remember {
+	margin: 0 0.3em 0 0;
+	width: fit-content;
+}
+.auth_container form .remember label::after {
+	content: "";
+}
+.forget {
+	color: var(--secondary);
+}
+label[for='remember'] {
+    display: flex;
+ }
+
+/* Styling the check button */
+input[type="checkbox"] {
+	visibility: hidden;
+}
+label[for='remember'] span.custom {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	height: 12px;
+	width: 12px;
+	background-color: white;
+    z-index: 1;
+}
+label[for='remember'] input[type="checkbox"]:checked ~ span.custom {
+	background-color: var(--secondary);
+}
+label[for='remember'] span.custom::after {
+	content: "";
+	position: absolute;
+	display: none;
+	left: 25%;
+	top: 3.5%;
+	width: 3px;
+	height: 6px;
+	border: 2px solid var(--primary);
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+label[for='remember'] input[type="checkbox"]:checked ~ span.custom::after {
+	display: block;
+}
+
+/*######## Login and Register Styles ended ########*/
