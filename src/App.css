@@ -55,11 +55,12 @@ body {
 	position: fixed;
 	background-color: white;
 	top: 0;
-	left: 0;
-	height: 100vh;
-	width: 100vw;
-	transform: translateX(105vw);
+	right: 0;
+	height: 60vh;
+	width: 60vw;
+	transform: translateX(65vw);
 	transition: 200ms all;
+	border-radius: 0 0 0 10px;
 }
 .navbar nav>div.active {
 	transform: translateX(0vw);
@@ -71,12 +72,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 2em;
-	padding-top: 2.5em;
+	gap: .6em;
+	padding-top: 2em;
 }
 .mobile_nav .close {
-	margin-left: 85%;
-	transform: translateY(-50%);
+	margin-left: 75%;
+	transform: translateY(-10%);
 }
 .mobile_nav>div ul a {
 	color: var(--primary);
@@ -92,7 +93,7 @@ body {
 	margin-top: .5em;
 }
 .navbar .authenticate a {
-	padding: .6em .8em;
+	padding: .4em .8em;
 	font-size: .9em;
 	text-align: center;
 	color: var(--primary);

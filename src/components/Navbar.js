@@ -29,15 +29,15 @@ const Navbar = () => {
                             Home
                         </NavLink>
                         <NavLink to='/about'
-                            className={({ isActive }) => isActive ? "#f5ba31" : "" }>
+                            style={({ isActive }) => ({ color: isActive ? "#f5ba31" : "" })}>
                             About
                         </NavLink>
                         <NavLink to='/contact'
-                            className={({ isActive }) => isActive ? "#f5ba31" : "" }>
+                            style={({ isActive }) => ({ color: isActive ? "#f5ba31" : "" })}>
                             Contact
                         </NavLink>
                         <NavLink to='/gallery'
-                            className={({ isActive }) => isActive ? "#f5ba31" : "" }>
+                            style={({ isActive }) => ({ color: isActive ? "#f5ba31" : "" })}>
                             Gallery
                         </NavLink>
 
