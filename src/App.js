@@ -4,6 +4,7 @@ import Register from './components/Register';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
+import Navbar from './components/Navbar';
 
 
 function App() {
@@ -13,13 +14,15 @@ function App() {
         window
       </a> */}
 
-      <Routes>
+      <Navbar />
+
+      {/* <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='*' element={<NotFound />} />
 
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

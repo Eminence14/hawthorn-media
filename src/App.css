@@ -28,6 +28,14 @@ body {
 	display: none;
 }
 
+/*########## Navbar styles #########*/
+
+/*########## Navbar styles end #########*/
+
+
+
+
+
 /*########## Home styles #########*/
 .home {
 	background-color: var(--secondary);
@@ -45,6 +53,11 @@ body {
 	border-radius: 10px;
 	color: white;
 }
+/*########## Home styles end #########*/
+
+
+
+
 
 /*######## Login and Register Styles ########*/
 .auth_container {
