@@ -1,13 +1,16 @@
 import { useRef } from 'react';
-import Logo from '../../assets/images/Hawthorn Studios Yellow.png';
+import { Link, useNavigate } from 'react-router-dom';
+import Logo from '../assets/images/Hawthorn Studios Yellow.png';
 
 
 const Login = () => {
 
     const togglePass = useRef()
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
         e.preventDefault();
+        navigate('/', { replace: true })
     }
     function handleClick() {
         togglePass.current.classList.toggle('active');
@@ -48,10 +51,7 @@ const Login = () => {
                         />
                     </div>
 
-                    <a href="#">
-                        Don't have an account?
-                        <span> Sign up</span>
-                    </a>
+                    <Link to='/register'> Don't have an account? <span> Sign up </span> </Link>
 
                     <div className="pass_options">
                         <div className="remember">

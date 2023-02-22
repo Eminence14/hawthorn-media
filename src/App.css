@@ -28,6 +28,24 @@ body {
 	display: none;
 }
 
+/*########## Home styles #########*/
+.home {
+	background-color: var(--secondary);
+	min-height: 100vh;
+	color: var(--primary);
+	display: flex;
+	place-items: center;
+	place-content: center;
+	flex-direction: column;
+	gap: 1.5em;
+}
+.home a {
+	background-color: var(--primary);
+	padding: 1em;
+	border-radius: 10px;
+	color: white;
+}
+
 /*######## Login and Register Styles ########*/
 .auth_container {
 	background-color: var(--primary);
@@ -37,6 +55,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	color: white;
+	padding-bottom: 50px;
 }
 .auth_container header img {
 	width: 100%;
@@ -121,7 +140,7 @@ input::placeholder {
 .auth_container form a {
 	color: white;
 }
-.auth_container form a:hover,
+.auth_container form a:hover ,
 .pass_options .forget:hover {
 	text-decoration: underline;
 	cursor: pointer;

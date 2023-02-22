@@ -1,11 +1,15 @@
 import { useRef } from 'react';
-import Logo from '../../assets/images/Hawthorn Studios Yellow.png';
+import { Link, useNavigate } from 'react-router-dom';
+import Logo from '../assets/images/Hawthorn Studios Yellow.png';
 
 const Register = () => {
     const togglePass = useRef()
     const togglePass2 = useRef()
+    const navigate = useNavigate();
+
     function handleSubmit(e) {
         e.preventDefault();
+        navigate('/', { replace: true })
     }
     function clickHandler(curr) {
         curr.current.classList.toggle('active');
@@ -36,7 +40,7 @@ const Register = () => {
                         <label htmlFor="password">
                             Password
                         </label>
-                        <span className="open_pass" onClick={()=>{clickHandler(togglePass)}}></span>
+                        <span className="open_pass" onClick={() => { clickHandler(togglePass) }}></span>
                         <input type="password" id="password" name='password' placeholder='Enter your password' autoComplete='off'
                             ref={togglePass}
                         />
@@ -53,11 +57,7 @@ const Register = () => {
                         />
                     </div>
 
-
-                    <a href="#">
-                        Already have an account?
-                        <span> Sign in</span>
-                    </a>
+                    <Link to='/login'> Already have an account? <span> Sign in </span> </Link>
 
                     <button>Sign up</button>
                 </form>

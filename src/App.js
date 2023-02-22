@@ -1,6 +1,9 @@
 import './App.css';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
+import Login from './components/Login';
+import Register from './components/Register';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import NotFound from './components/NotFound';
 
 
 function App() {
@@ -10,8 +13,13 @@ function App() {
         window
       </a> */}
 
-      <Register />
-      {/* <Login /> */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='*' element={<NotFound />} />
+
+      </Routes>
     </div>
   );
 }
