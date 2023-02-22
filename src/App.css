@@ -8,8 +8,9 @@
 	padding: 0;
 	margin: 0;
 	background: 0;
-	font-size: 14px;
 	border: none;
+	font-size: 14px;
+	list-style: none;
 	box-sizing: border-box;
 	text-decoration: none;
 }
@@ -29,7 +30,95 @@ body {
 }
 
 /*########## Navbar styles #########*/
-
+.navbar {
+	background-color: var(--primary);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1.5em 1em;
+	position: relative;
+}
+.navbar * {
+	font-family: Bodoni, serif;
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.navbar .logo {
+	width: 70px;
+	cursor: auto;
+}
+.navbar img {
+	width: 20px;
+	cursor: pointer;
+}
+.navbar nav>div {
+	position: fixed;
+	background-color: white;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	transform: translateX(105vw);
+	transition: 200ms all;
+}
+.navbar nav>div.active {
+	transform: translateX(0vw);
+}
+.navbar .hamburger.active {
+	display: none;
+}
+.navbar nav>div ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2em;
+	padding-top: 2.5em;
+}
+.mobile_nav .close {
+	margin-left: 85%;
+	transform: translateY(-50%);
+}
+.mobile_nav>div ul a {
+	color: var(--primary);
+}
+.mobile_nav>div ul a:hover {
+	color: var(--secondary);
+	text-decoration: underline;
+}
+.navbar .authenticate {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	margin-top: .5em;
+}
+.navbar .authenticate a {
+	padding: .6em .8em;
+	font-size: .9em;
+	text-align: center;
+	color: var(--primary);
+}
+.navbar .authenticate a:nth-child(1) {
+	border: 1px solid var(--secondary);
+	border-radius: 10px;
+	color: var(--primary);
+}
+.navbar .authenticate a:nth-child(2):hover {
+	border: 1px solid var(--secondary);
+	background-color: transparent;
+	text-decoration: none;
+}
+.navbar .authenticate a:nth-child(1):hover {
+	text-decoration: none;
+	background-color: var(--secondary);
+}
+.navbar .authenticate a:nth-child(2) {
+	color: var(--primary);
+	border-radius: 10px;
+	background-color: var(--secondary);
+}
+.mobile_nav>div ul * {
+	cursor: pointer;
+}
 /*########## Navbar styles end #########*/
 
 
@@ -37,22 +126,7 @@ body {
 
 
 /*########## Home styles #########*/
-.home {
-	background-color: var(--secondary);
-	min-height: 100vh;
-	color: var(--primary);
-	display: flex;
-	place-items: center;
-	place-content: center;
-	flex-direction: column;
-	gap: 1.5em;
-}
-.home a {
-	background-color: var(--primary);
-	padding: 1em;
-	border-radius: 10px;
-	color: white;
-}
+
 /*########## Home styles end #########*/
 
 
@@ -70,7 +144,8 @@ body {
 	color: white;
 	padding-bottom: 50px;
 }
-.auth_container header img {
+.auth_container header img,
+.logo {
 	width: 100%;
 	max-width: 120px;
 }
