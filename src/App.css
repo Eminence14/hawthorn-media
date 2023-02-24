@@ -9,15 +9,21 @@
 	margin: 0;
 	background: 0;
 	border: none;
+	outline: none;
 	font-size: 14px;
 	list-style: none;
 	box-sizing: border-box;
 	text-decoration: none;
+	font-family: Bodoni, serif;
 }
 
 @font-face {
 	font-family: Bodoni;
 	src: url("./assets/fonts/BodoniModa.ttf");
+}
+@font-face {
+	font-family: Roboto;
+	src: url("./assets/fonts/Roboto-Regular.ttf");
 }
 
 body {
@@ -38,6 +44,21 @@ body {
 	padding: 0 1.5em 1em;
 	position: relative;
 }
+.navbar .overlay {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	pointer-events: all;
+	z-index: 3;
+	transform: translateX(100vw);
+	transition: 180ms all;
+}
+.navbar .overlay.active {
+	transform: translate(0vw);
+}
 .navbar * {
 	font-family: Bodoni, serif;
 	font-weight: 700;
@@ -51,38 +72,40 @@ body {
 	width: 20px;
 	cursor: pointer;
 }
-.navbar nav>div {
+.navbar nav > div {
 	position: fixed;
 	background-color: white;
 	top: 0;
 	right: 0;
-	height: 60vh;
+	height: max-content;
 	width: 60vw;
 	transform: translateX(65vw);
 	transition: 200ms all;
 	border-radius: 0 0 0 10px;
+	z-index: 4;
+	padding-bottom: 2.5em;
 }
-.navbar nav>div.active {
+.navbar nav > div.active {
 	transform: translateX(0vw);
 }
 .navbar .hamburger.active {
 	display: none;
 }
-.navbar nav>div ul {
+.navbar nav > div ul {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: .6em;
+	gap: 0.6em;
 	padding-top: 2em;
 }
 .mobile_nav .close {
 	margin-left: 75%;
 	transform: translateY(-10%);
 }
-.mobile_nav>div ul a {
+.mobile_nav > div ul a {
 	color: var(--primary);
 }
-.mobile_nav>div ul a:hover {
+.mobile_nav > div ul a:hover {
 	color: var(--secondary);
 	text-decoration: underline;
 }
@@ -90,11 +113,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
-	margin-top: .5em;
+	margin-top: 0.5em;
 }
 .navbar .authenticate a {
-	padding: .4em .8em;
-	font-size: .9em;
+	padding: 0.4em 0.8em;
+	font-size: 0.9em;
 	text-align: center;
 	color: var(--primary);
 }
@@ -117,24 +140,283 @@ body {
 	border-radius: 10px;
 	background-color: var(--secondary);
 }
-.mobile_nav>div ul * {
+.mobile_nav > div ul * {
 	cursor: pointer;
 }
 /*########## Navbar styles end #########*/
 
-
-
-
-
 /*########## Home styles #########*/
+.home {
+	background-color: var(--primary);
+	color: white;
+}
+.home section.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1em;
+	color: white;
+	height: 260px;
+	padding: 2em;
+	background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.5) 100%
+		),
+		url("./assets/images/Portrait.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.home .hero p {
+	font-size: 1.8em;
+	display: block;
+	margin: 0 auto;
+}
+.home .hero p span {
+	color: var(--secondary);
+	font-size: 1em;
+}
+.home .hero button {
+	background-color: var(--secondary);
+	color: var(--primary);
+	font-weight: 700;
+	padding: 1em;
+	border-radius: 10px;
+}
+.home .hero button:hover {
+	background-color: var(--primary);
+	color: var(--secondary);
+	cursor: pointer;
+}
+.home .gallery {
+	margin-top: 5em;
+	position: relative;
+}
+.gallery .right_tri {
+	position: absolute;
+	top: 40%;
+	height: 50%;
+	width: 100%;
+	z-index: 1;
+	transform: translateY(-50%);
+	background-color: rgba(245, 186, 49, 30%);
+	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.home .gallery h2,
+.home .services h2 {
+	color: var(--secondary);
+	font-size: 1.5em;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 2em;
+}
+.galleries img {
+	width: 90%;
+	object-fit: cover;
+	display: block;
+	margin: 1em auto;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px #f5ba3141;
+	position: relative;
+	z-index: 2;
+}
+.gallery a {
+	color: var(--secondary);
+	border: 1px solid var(--secondary);
+	border-radius: 10px;
+	padding: 1em 0;
+	display: block;
+	margin: 2em auto 0;
+	text-align: center;
+	width: 150px;
+	cursor: pointer;
+}
+.home .services {
+	margin-top: 4em;
+}
+.home .services div img {
+	width: 90%;
+	display: block;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+section.services ul#our_services {
+	color: var(--secondary);
+	font-weight: 600;
+	display: block;
+	margin: 2em auto;
+	width: 200px;
+	transform: translate(30px);
+}
+.services ul li {
+	list-style-type: disc;
+	font-size: 1.2em;
+}
+.services button {
+	background-color: var(--secondary);
+	color: var(--primary);
+	padding: 1em 0;
+	display: block;
+	width: 150px;
+	margin: 0 auto;
+	font-weight: 700;
+	border-radius: 10px;
+}
+.home .ceo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 8em;
+	padding-left: 1em;
+	position: relative;
+}
+.ceo > div.left {
+	position: relative;
+}
+.ceo > div.left * {
+	height: 220px;
+	width: 150px;
+}
+.ceo > div.left img {
+	position: relative;
+	z-index: 2;
+	object-fit: cover;
+}
+.ceo > div.left > div {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	z-index: 1;
+	background-color: var(--secondary);
+}
+.ceo > div.right {
+	width: 55%;
+	background-color: var(--secondary);
+	color: var(--primary);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	padding-right: 0.2em;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	height: 150%;
+	clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+.ceo > div.right h5,
+.ceo > div.right h6 {
+	font-weight: 700;
+	font-size: 0.8em;
+}
+section.choose {
+	margin-top: 10em;
+	color: var(--secondary);
+}
+section.choose h1 {
+	font-size: 1.4em;
+	text-align: center;
+}
+.choose p {
+	padding: 1.5em;
+	background-color: var(--secondary);
+	color: var(--primary);
+	width: 90%;
+	margin: 1em auto;
+	border-radius: 10px;
+	font-family: Roboto, sans-serif;
+	word-spacing: 3px;
+	line-height: 1.5em;
+}
+section.subscribe {
+	color: var(--secondary);
+	margin: 8em 0 0;
+	padding: 0 1em 8em;
+}
+.subscribe h1 {
+	font-size: 1.4em;
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+.subscribe label {
+	display: block;
+	margin-bottom: 0.5em;
+}
+.subscribe input {
+	border: 1px solid var(--secondary);
+	padding: 1em;
+	width: 100%;
+	border-radius: 10px;
+	background-color: white;
+	margin-bottom: 1.3em;
+}
+.subscribe button {
+	display: block;
+	margin: 1em auto 0;
+	width: 200px;
+	background-color: var(--secondary);
+	color: var(--primary);
+	padding: 1em 0;
+	font-weight: bold;
+	border-radius: 10px;
+}
+/*########## HOME STYLES END #########*/
 
-/*########## Home styles end #########*/
+
+
+
+
+/* """"""""""" FOOTER STYLES BEGINS """"""""" */
+
+footer {
+	padding-bottom: 2em;
+	background-color: var(--secondary);
+}
+footer .top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	padding: 2em 0;
+}
+footer .top a {
+	color: var(--primary);
+	cursor: pointer;
+	font-weight: 700;
+}
+footer .top a:hover {
+	text-decoration: underline;
+}
+footer hr {
+	height:1px;
+	background-color: var(--primary);
+}
+footer .bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em 0 0;
+	gap: 1em;
+	font-weight: 700;
+}
+footer .bottom .left {
+	display: flex;
+	align-items: center;
+	gap: 1.5em;
+}
+
+
+/* """"""""""" FOOTER STYLES ENDS """"""""" */
 
 
 
 
 
-/*######## Login and Register Styles ########*/
+
+/*######## LOGIN AND REGISTER STYLES ########*/
 .auth_container {
 	background-color: var(--primary);
 	min-height: 100vh;
@@ -202,34 +484,36 @@ input::placeholder {
 	color: #0000004d;
 }
 .auth_container .pass {
-    position: relative;
+	position: relative;
 }
 .pass span.open_pass {
-    position: absolute;
-    right: 5.3%;
-    top: 55%;
-    background-color: #00000001;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    cursor: pointer;
+	position: absolute;
+	right: 5.3%;
+	top: 55%;
+	background-color: #00000001;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	cursor: pointer;
 }
 .auth_container form input[type="password"] {
-    background-image: url('./assets/images/mdi_password-outline.png'), url('./assets/images/eye_closed.svg');
-    background-color: white;
-    background-repeat: no-repeat;
-    background-position: 5%, 95%;
+	background-image: url("./assets/images/mdi_password-outline.png"),
+		url("./assets/images/eye_closed.svg");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: 5%, 95%;
 }
 .auth_container form input[type="text"].active {
-    background-image: url('./assets/images/mdi_password-outline.png'), url('./assets/images/eye_open.svg');
-    background-color: white;
-    background-repeat: no-repeat;
-    background-position: 5%, 95%;
+	background-image: url("./assets/images/mdi_password-outline.png"),
+		url("./assets/images/eye_open.svg");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: 5%, 95%;
 }
 .auth_container form a {
 	color: white;
 }
-.auth_container form a:hover ,
+.auth_container form a:hover,
 .pass_options .forget:hover {
 	text-decoration: underline;
 	cursor: pointer;
@@ -279,15 +563,15 @@ input::placeholder {
 .forget {
 	color: var(--secondary);
 }
-label[for='remember'] {
-    display: flex;
- }
+label[for="remember"] {
+	display: flex;
+}
 
 /* Styling the check button */
 input[type="checkbox"] {
 	visibility: hidden;
 }
-label[for='remember'] span.custom {
+label[for="remember"] span.custom {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -295,12 +579,12 @@ label[for='remember'] span.custom {
 	height: 12px;
 	width: 12px;
 	background-color: white;
-    z-index: 1;
+	z-index: 1;
 }
-label[for='remember'] input[type="checkbox"]:checked ~ span.custom {
+label[for="remember"] input[type="checkbox"]:checked ~ span.custom {
 	background-color: var(--secondary);
 }
-label[for='remember'] span.custom::after {
+label[for="remember"] span.custom::after {
 	content: "";
 	position: absolute;
 	display: none;
@@ -314,7 +598,7 @@ label[for='remember'] span.custom::after {
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-label[for='remember'] input[type="checkbox"]:checked ~ span.custom::after {
+label[for="remember"] input[type="checkbox"]:checked ~ span.custom::after {
 	display: block;
 }
 

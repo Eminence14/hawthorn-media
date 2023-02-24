@@ -12,9 +12,9 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <div className='App'>
-      {/* <a href="javascript:window.open('http://localhost:3000/', '', 'width: 375px , height: auto')">
+      <a href="javascript:window.open('http://localhost:3000/', '', 'width: 375px , height: auto')">
         window
-      </a> */}
+      </a>
 
 
       <Routes>

@@ -1,12 +1,85 @@
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import GallPreview1 from '../assets/images/gallery_preview1.jpeg'
+import GallPreview2 from '../assets/images/gallery_preview2.jpeg'
+import GallPreview3 from '../assets/images/gallery_preview3.png'
+import Services from '../assets/images/our_services1.jpg'
+import Ceo from '../assets/images/ceo.jpg'
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Home = () => {
     return (
-        <div className="home">
+        <>
             <Navbar />
-        </div>
+            <main className="home">
+                <section className="hero">
+                    <p>
+                        Creating Timeless Moments. Capturing <span> Luxury </span> in Every Frame.
+                    </p>
+                    <button>Book Us Now</button>
+                </section>
+                <section className="gallery">
+                    <div className="right_tri"></div>
+                    <h2>Our Gallery</h2>
+                    <div className="galleries">
+                        <img src={GallPreview1} alt="" />
+                        <img src={GallPreview2} alt="" />
+                        <img src={GallPreview3} alt="" />
+                    </div>
+                    <Link to="/gallery">View Our Gallery</Link>
+                </section>
+                <section className="services">
+                    <h2>Our Services</h2>
+                    <div>
+                        <img src={Services} alt="" />
+                    </div>
+                    <ul id="our_services">
+                        <li>Cinematography</li>
+                        <li>Photography</li>
+                        <li>Studio sessions</li>
+                        <li>Videography</li>
+                        <li>Cooperate events etc.</li>
+                    </ul>
+                    <button>Get Started</button>
+                </section>
+                <section className="ceo">
+                    <div className="left">
+                        <img src={Ceo} alt="" />
+                        <div></div>
+                    </div>
+                    <div className="right">
+                        <h5>MR SAM HAWTHORN ULOKO</h5>
+                        <h6>Chief Executive Officer</h6>
+                    </div>
+                </section>
+                <section className="choose">
+                    <h1>Why Choose Us?</h1>
+                    <p>
+                        At Hawthorn Media, we understand that your special moments are unique and deserves a personalized touch.Thats why we work closely with our clients to understand their needs and preferences, ensuring that every detail is captured just the way you envisioned it. Whether its your wedding day, a special event or a corporate project, we will ensure that you recieve a final product that tells your story in a beautiful, luxurious and compelling way, giving you a satisfactory feeling.
+                    </p>
+                </section>
+                <section className="subscribe">
+                    <h1>
+                        Subscribe To Our News Letter.
+                    </h1>
+                    <form >
+                        <label htmlFor="email">
+                            Name
+                        </label>
+                        <input type="email" id="email" name='email' placeholder='Full Name' autoComplete='off' />
+
+                        <label htmlFor="email">
+                            Email
+                        </label>
+                        <input type="email" id="email" name='email' placeholder='Email Address' autoComplete='off' />
+                    </form>
+                    <button>Subscribe</button>
+                </section>
+            </main>
+            <Footer />
+        </>
+
     );
 }
- 
+
 export default Home;

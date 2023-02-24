@@ -8,16 +8,20 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
     const opener = useRef()
     const closer = useRef()
+    const overlay = useRef()
     function openHam() {
         opener.current.classList.add('active')
         closer.current.classList.add('active')
+        overlay.current.classList.add('active')
     }
     function closeHam() {
         opener.current.classList.remove('active')
         closer.current.classList.remove('active')
+        overlay.current.classList.remove('active')
     }
     return (
         <div className="navbar">
+            <div className="overlay" ref={overlay} onClick={closeHam}></div>
             <img src={Logo} alt="" className='logo' />
             <nav className='mobile_nav'>
                 <img src={Hamburger} alt="" className='hamburger' ref={opener} onClick={openHam} />
