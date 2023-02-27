@@ -7,14 +7,15 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import NotFound from './components/NotFound';
+import AccDashboard from './components/AccDashboard';
 
 
 function App() {
   return (
     <div className='App'>
-      <a href="javascript:window.open('http://localhost:3000/', '', 'width: 375px , height: auto')">
+      {/* <a href="javascript:window.open('http://localhost:3000/', '', 'width: 375px , height: auto')">
         window
-      </a>
+      </a> */}
 
 
       <Routes>
@@ -24,6 +25,7 @@ function App() {
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/dashboard' element={<AccDashboard />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>

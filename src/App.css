@@ -1,7 +1,8 @@
 :root {
-	--primary: #1d1206;
+	--primary: #111;
 	--secondary: #f5ba31;
 	--red: #eb1717;
+	--roboto: Roboto, sans-serif;
 }
 
 * {
@@ -21,6 +22,7 @@
 	font-family: Bodoni;
 	src: url("./assets/fonts/BodoniModa.ttf");
 }
+
 @font-face {
 	font-family: Roboto;
 	src: url("./assets/fonts/Roboto-Regular.ttf");
@@ -44,6 +46,7 @@ body {
 	padding: 0 1.5em 1em;
 	position: relative;
 }
+
 .navbar .overlay {
 	position: fixed;
 	height: 100vh;
@@ -56,23 +59,28 @@ body {
 	transform: translateX(100vw);
 	transition: 180ms all;
 }
+
 .navbar .overlay.active {
 	transform: translate(0vw);
 }
+
 .navbar * {
 	font-family: Bodoni, serif;
 	font-weight: 700;
 	font-size: 1.1em;
 }
+
 .navbar .logo {
 	width: 70px;
 	cursor: auto;
 }
+
 .navbar img {
 	width: 20px;
 	cursor: pointer;
 }
-.navbar nav > div {
+
+.navbar nav>div {
 	position: fixed;
 	background-color: white;
 	top: 0;
@@ -85,64 +93,78 @@ body {
 	z-index: 4;
 	padding-bottom: 2.5em;
 }
-.navbar nav > div.active {
+
+.navbar nav>div.active {
 	transform: translateX(0vw);
 }
+
 .navbar .hamburger.active {
 	display: none;
 }
-.navbar nav > div ul {
+
+.navbar nav>div ul {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 0.6em;
 	padding-top: 2em;
 }
+
 .mobile_nav .close {
 	margin-left: 75%;
 	transform: translateY(-10%);
 }
-.mobile_nav > div ul a {
+
+.mobile_nav>div ul a {
 	color: var(--primary);
 }
-.mobile_nav > div ul a:hover {
+
+.mobile_nav>div ul a:hover {
 	color: var(--secondary);
 	text-decoration: underline;
 }
+
 .navbar .authenticate {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
 	margin-top: 0.5em;
 }
+
 .navbar .authenticate a {
 	padding: 0.4em 0.8em;
 	font-size: 0.9em;
 	text-align: center;
 	color: var(--primary);
 }
+
 .navbar .authenticate a:nth-child(1) {
 	border: 1px solid var(--secondary);
 	border-radius: 10px;
 	color: var(--primary);
 }
+
 .navbar .authenticate a:nth-child(2):hover {
 	border: 1px solid var(--secondary);
 	background-color: transparent;
 	text-decoration: none;
 }
+
 .navbar .authenticate a:nth-child(1):hover {
 	text-decoration: none;
 	background-color: var(--secondary);
 }
+
 .navbar .authenticate a:nth-child(2) {
 	color: var(--primary);
 	border-radius: 10px;
 	background-color: var(--secondary);
 }
-.mobile_nav > div ul * {
+
+.mobile_nav>div ul * {
 	cursor: pointer;
 }
+
 /*########## Navbar styles end #########*/
 
 /*########## Home styles #########*/
@@ -150,6 +172,7 @@ body {
 	background-color: var(--primary);
 	color: white;
 }
+
 .home section.hero {
 	display: flex;
 	flex-direction: column;
@@ -159,51 +182,58 @@ body {
 	color: white;
 	height: 260px;
 	padding: 2em;
-	background-image: linear-gradient(
-			to bottom,
+	background-image: linear-gradient(to bottom,
 			rgba(0, 0, 0, 0.5) 0%,
-			rgba(0, 0, 0, 0.5) 100%
-		),
+			rgba(0, 0, 0, 0.5) 100%),
 		url("./assets/images/Portrait.jpeg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
+
 .home .hero p {
 	font-size: 1.8em;
 	display: block;
 	margin: 0 auto;
 }
+
 .home .hero p span {
 	color: var(--secondary);
 	font-size: 1em;
 }
-.home .hero button {
+
+.home .hero button,
+.button {
 	background-color: var(--secondary);
 	color: var(--primary);
 	font-weight: 700;
 	padding: 1em;
 	border-radius: 10px;
+	cursor: pointer;
 }
+
 .home .hero button:hover {
 	background-color: var(--primary);
 	color: var(--secondary);
 	cursor: pointer;
 }
+
 .home .gallery {
 	margin-top: 5em;
 	position: relative;
 }
+
 .gallery .right_tri {
 	position: absolute;
 	top: 40%;
-	height: 50%;
+	height: 80%;
 	width: 100%;
 	z-index: 1;
 	transform: translateY(-50%);
 	background-color: rgba(245, 186, 49, 30%);
-	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+	clip-path: polygon(100% 20%, 0% 92%, 100% 92%);
 }
+
 .home .gallery h2,
 .home .services h2 {
 	color: var(--secondary);
@@ -212,36 +242,70 @@ body {
 	text-align: center;
 	margin-bottom: 2em;
 }
+
+.galleries .swiper {
+	height: 300px;
+	width: 100%;
+	max-width: 450px;
+	margin-right: 0;
+}
+
+.galleries .swiper-pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.galleries .swiper-pagination-bullet {
+	background: white;
+	position: relative;
+	top: -5px;
+	opacity: .8;
+	width: 6px;
+	height: 6px;
+}
+
+.galleries .swiper-pagination-bullet-active {
+	background: var(--secondary);
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
 .galleries img {
-	width: 90%;
+	width: 300px;
+	height: 250px;
 	object-fit: cover;
-	display: block;
-	margin: 1em auto;
 	border-radius: 10px;
+	display: block;
 	box-shadow: 3px 3px 10px #f5ba3141;
 	position: relative;
 	z-index: 2;
 }
+
 .gallery a {
 	color: var(--secondary);
 	border: 1px solid var(--secondary);
 	border-radius: 10px;
 	padding: 1em 0;
 	display: block;
-	margin: 2em auto 0;
+	margin: .5em auto 0;
 	text-align: center;
 	width: 150px;
 	cursor: pointer;
 }
+
 .home .services {
 	margin-top: 4em;
 }
+
 .home .services div img {
 	width: 90%;
 	display: block;
 	border-radius: 10px;
 	margin: 0 auto;
 }
+
 section.services ul#our_services {
 	color: var(--secondary);
 	font-weight: 600;
@@ -250,10 +314,12 @@ section.services ul#our_services {
 	width: 200px;
 	transform: translate(30px);
 }
+
 .services ul li {
 	list-style-type: disc;
 	font-size: 1.2em;
 }
+
 .services button {
 	background-color: var(--secondary);
 	color: var(--primary);
@@ -264,6 +330,7 @@ section.services ul#our_services {
 	font-weight: 700;
 	border-radius: 10px;
 }
+
 .home .ceo {
 	display: flex;
 	justify-content: space-between;
@@ -272,26 +339,31 @@ section.services ul#our_services {
 	padding-left: 1em;
 	position: relative;
 }
-.ceo > div.left {
+
+.ceo>div.left {
 	position: relative;
 }
-.ceo > div.left * {
+
+.ceo>div.left * {
 	height: 220px;
 	width: 150px;
 }
-.ceo > div.left img {
+
+.ceo>div.left img {
 	position: relative;
 	z-index: 2;
 	object-fit: cover;
 }
-.ceo > div.left > div {
+
+.ceo>div.left>div {
 	position: absolute;
 	top: 8px;
 	left: 8px;
 	z-index: 1;
 	background-color: var(--secondary);
 }
-.ceo > div.right {
+
+.ceo>div.right {
 	width: 55%;
 	background-color: var(--secondary);
 	color: var(--primary);
@@ -307,19 +379,23 @@ section.services ul#our_services {
 	height: 150%;
 	clip-path: polygon(100% 0, 0 50%, 100% 100%);
 }
-.ceo > div.right h5,
-.ceo > div.right h6 {
+
+.ceo>div.right h5,
+.ceo>div.right h6 {
 	font-weight: 700;
 	font-size: 0.8em;
 }
+
 section.choose {
 	margin-top: 10em;
 	color: var(--secondary);
 }
+
 section.choose h1 {
 	font-size: 1.4em;
 	text-align: center;
 }
+
 .choose p {
 	padding: 1.5em;
 	background-color: var(--secondary);
@@ -327,24 +403,28 @@ section.choose h1 {
 	width: 90%;
 	margin: 1em auto;
 	border-radius: 10px;
-	font-family: Roboto, sans-serif;
+	font-family: var(--roboto);
 	word-spacing: 3px;
 	line-height: 1.5em;
 }
+
 section.subscribe {
 	color: var(--secondary);
 	margin: 8em 0 0;
 	padding: 0 1em 8em;
 }
+
 .subscribe h1 {
 	font-size: 1.4em;
 	text-align: center;
 	margin-bottom: 0.5em;
 }
+
 .subscribe label {
 	display: block;
 	margin-bottom: 0.5em;
 }
+
 .subscribe input {
 	border: 1px solid var(--secondary);
 	padding: 1em;
@@ -353,6 +433,7 @@ section.subscribe {
 	background-color: white;
 	margin-bottom: 1.3em;
 }
+
 .subscribe button {
 	display: block;
 	margin: 1em auto 0;
@@ -363,7 +444,152 @@ section.subscribe {
 	font-weight: bold;
 	border-radius: 10px;
 }
+
 /*########## HOME STYLES END #########*/
+
+
+
+
+/* ABOUT US STYLES BEGINS */
+
+.back_logo {
+	height: 275px;
+	width: 100%;
+	max-width: 430px;
+	margin: 0 auto;
+	background-image: linear-gradient(to bottom,
+			rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.5) 100%),
+		url("./assets/images/back_logo.svg");
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: cover;
+}
+
+.about_us {
+	padding: 1em 2em 3em;
+	background-color: var(--primary);
+	color: white;
+}
+
+.about_us h1 {
+	font-size: 1.5em;
+	margin-bottom: 1.5em;
+	color: var(--secondary);
+}
+
+.about_us p {
+	font-family: var(--roboto);
+	line-height: 20px;
+}
+
+
+/* ABOUT US STYLES ENDS */
+
+
+
+
+
+/* CONTACT US STYLES BEGINS */
+
+.contact_page {
+	background-color: var(--primary);
+}
+
+.contact_page .back_logo {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-align: center;
+	background-image: linear-gradient(to bottom,
+			rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.5) 100%),
+		url("./assets/images/back_logo2.png");
+}
+
+.contact_page .back_logo h2 {
+	font-size: 1.8em;
+	color: var(--secondary);
+}
+.contact_page .back_logo .button {
+	margin-top: .5em;
+}
+.contact_us {
+	margin-top: 5em;
+}
+
+.contact_us section {
+	margin-bottom: 5em;
+}
+
+.contact_us .info_card {
+	background-color: white;
+	height: fit-content;
+	border-radius: 10px;
+	display: flex;
+	gap: .5em;
+	justify-content: left;
+	align-items: center;
+	width: 70%;
+	margin: 0 auto 1em;
+	padding: 1em 0 1em 1.5em;
+}
+
+.contact_us .info_card span {
+	font-family: var(--roboto);
+}
+
+.send_message {
+	padding: .8em;
+}
+
+.send_message h3 {
+	font-family: var(--roboto);
+	color: var(--secondary);
+	margin-bottom: 1em;
+}
+
+.send_message form {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.send_message form input,
+.send_message form textarea {
+	background-color: white;
+	padding: 1em;
+	font-family: var(--roboto);
+	border: 2px solid var(--secondary);
+	border-radius: 10px;
+}
+.send_message form textarea {
+	height: 150px;
+}
+.send_message form input::placeholder {
+	font-family: var(--roboto);
+}
+.send_message button {
+	width: 120px;
+	font-family: var(--roboto);
+	font-weight: 400;
+}
+.contact_us .map h1 {
+	text-align: center;
+	font-size: 1.4em;
+	color: var(--secondary);
+	margin-bottom: 2em;
+}
+.contact_us .map img {
+	width: 100%;
+	max-width: 430px;
+	display: block;
+	margin: 0 auto;
+}
+
+/* CONTACT US STYLES ENDS */
 
 
 
@@ -375,6 +601,7 @@ footer {
 	padding-bottom: 2em;
 	background-color: var(--secondary);
 }
+
 footer .top {
 	display: flex;
 	justify-content: center;
@@ -382,18 +609,22 @@ footer .top {
 	gap: 1em;
 	padding: 2em 0;
 }
+
 footer .top a {
 	color: var(--primary);
 	cursor: pointer;
 	font-weight: 700;
 }
+
 footer .top a:hover {
 	text-decoration: underline;
 }
+
 footer hr {
-	height:1px;
+	height: 1px;
 	background-color: var(--primary);
 }
+
 footer .bottom {
 	display: flex;
 	flex-direction: column;
@@ -402,6 +633,7 @@ footer .bottom {
 	gap: 1em;
 	font-weight: 700;
 }
+
 footer .bottom .left {
 	display: flex;
 	align-items: center;
@@ -426,34 +658,43 @@ footer .bottom .left {
 	align-items: center;
 	color: white;
 	padding-bottom: 50px;
+	position: relative;
 }
+
 .auth_container header img,
 .logo {
 	width: 100%;
 	max-width: 120px;
 }
+
 .auth_container main {
 	padding: 0 2em;
 	width: 100%;
 	max-width: 500px;
 }
+
 .auth_container section span {
 	display: block;
 }
+
 .auth_container section span:nth-child(1) {
 	font-size: 20px;
 	font-weight: 900;
 	color: var(--secondary);
 }
+
 .auth_container section span:nth-child(2) {
 	font-size: 16px;
 }
+
 .auth_container form {
 	margin-top: 20px;
 }
+
 .auth_container form label {
 	font-weight: bold;
 }
+
 .auth_container form label::after {
 	content: "*";
 	color: var(--red);
@@ -461,6 +702,7 @@ footer .bottom .left {
 	position: relative;
 	bottom: 2px;
 }
+
 .auth_container form input {
 	background-color: white;
 	padding: 1em;
@@ -475,17 +717,21 @@ footer .bottom .left {
 	font-family: Bodoni, serif;
 	font-size: 1.2em;
 }
+
 .auth_container form input[type="email"] {
 	background: white url("./assets/images/ic_outline-email.png") 5% no-repeat;
 }
+
 input::placeholder {
 	font-family: Bodoni, serif;
 	font-weight: 900;
 	color: #0000004d;
 }
+
 .auth_container .pass {
 	position: relative;
 }
+
 .pass span.open_pass {
 	position: absolute;
 	right: 5.3%;
@@ -496,6 +742,7 @@ input::placeholder {
 	border-radius: 10px;
 	cursor: pointer;
 }
+
 .auth_container form input[type="password"] {
 	background-image: url("./assets/images/mdi_password-outline.png"),
 		url("./assets/images/eye_closed.svg");
@@ -503,6 +750,7 @@ input::placeholder {
 	background-repeat: no-repeat;
 	background-position: 5%, 95%;
 }
+
 .auth_container form input[type="text"].active {
 	background-image: url("./assets/images/mdi_password-outline.png"),
 		url("./assets/images/eye_open.svg");
@@ -510,17 +758,23 @@ input::placeholder {
 	background-repeat: no-repeat;
 	background-position: 5%, 95%;
 }
-.auth_container form a {
+
+.auth_container>a {
+	position: absolute;
+	bottom: 1em;
 	color: white;
 }
-.auth_container form a:hover,
+
+.auth_container>a:hover,
 .pass_options .forget:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
-.auth_container form a span {
+
+.auth_container>a span {
 	color: var(--secondary);
 }
+
 .auth_container form button {
 	background-color: var(--secondary);
 	color: var(--primary);
@@ -533,36 +787,44 @@ input::placeholder {
 	padding: 0.6em 0;
 	cursor: pointer;
 }
+
 .pass_options {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 1em;
 }
+
 .auth_container form .remember label,
 .pass_options .forget {
 	font-weight: bold;
 }
+
 .auth_container .remember {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	position: relative;
 }
+
 .remember *,
 .pass_options .forget {
 	cursor: pointer;
 }
+
 .remember input#remember {
 	margin: 0 0.3em 0 0;
 	width: fit-content;
 }
+
 .auth_container form .remember label::after {
 	content: "";
 }
+
 .forget {
 	color: var(--secondary);
 }
+
 label[for="remember"] {
 	display: flex;
 }
@@ -571,6 +833,7 @@ label[for="remember"] {
 input[type="checkbox"] {
 	visibility: hidden;
 }
+
 label[for="remember"] span.custom {
 	position: absolute;
 	top: 50%;
@@ -581,9 +844,11 @@ label[for="remember"] span.custom {
 	background-color: white;
 	z-index: 1;
 }
-label[for="remember"] input[type="checkbox"]:checked ~ span.custom {
+
+label[for="remember"] input[type="checkbox"]:checked~span.custom {
 	background-color: var(--secondary);
 }
+
 label[for="remember"] span.custom::after {
 	content: "";
 	position: absolute;
@@ -598,8 +863,44 @@ label[for="remember"] span.custom::after {
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-label[for="remember"] input[type="checkbox"]:checked ~ span.custom::after {
+
+label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 	display: block;
 }
 
 /*######## Login and Register Styles ended ########*/
+
+
+
+
+
+
+
+
+
+
+/* ACCOUNT PAGES STYLES BEGINS */
+
+
+/* ACCOUNT NAVBAR STARTS */
+
+
+
+/* ACCOUNT NAVBAR ENDS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ACCOUNT PAGES STYLES ENDS */

@@ -6,6 +6,11 @@ import Services from '../assets/images/our_services1.jpg'
 import Ceo from '../assets/images/ceo.jpg'
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { Pagination, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 const Home = () => {
     return (
@@ -22,9 +27,22 @@ const Home = () => {
                     <div className="right_tri"></div>
                     <h2>Our Gallery</h2>
                     <div className="galleries">
-                        <img src={GallPreview1} alt="" />
-                        <img src={GallPreview2} alt="" />
-                        <img src={GallPreview3} alt="" />
+                        <Swiper
+                            modules={[Pagination, A11y]}
+                            spaceBetween={50}
+                            slidesPerView={1.3}
+                            pagination={{ clickable: true }}
+                        >
+                            <SwiperSlide>
+                                <img src={GallPreview1} alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src={GallPreview2} alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src={GallPreview3} alt="" />
+                            </SwiperSlide>
+                        </Swiper>
                     </div>
                     <Link to="/gallery">View Our Gallery</Link>
                 </section>

@@ -57,11 +57,11 @@ const Register = () => {
                         />
                     </div>
 
-                    <Link to='/login'> Already have an account? <span> Sign in </span> </Link>
 
                     <button>Sign up</button>
                 </form>
             </main>
+            <Link to='/login'> Already have an account? <span> Sign in </span> </Link>
         </div>
     );
 }

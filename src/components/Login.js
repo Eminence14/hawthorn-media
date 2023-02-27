@@ -51,8 +51,6 @@ const Login = () => {
                         />
                     </div>
 
-                    <Link to='/register'> Don't have an account? <span> Sign up </span> </Link>
-
                     <div className="pass_options">
                         <div className="remember">
                             <label htmlFor="remember">
@@ -70,6 +68,7 @@ const Login = () => {
                     <button>Sign in</button>
                 </form>
             </main>
+            <Link to='/register'> Don't have an account? <span> Sign up </span> </Link>
         </div>
     );
 }
