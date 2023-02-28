@@ -28,9 +28,9 @@ const Home = () => {
                     <h2>Our Gallery</h2>
                     <div className="galleries">
                         <Swiper
-                            modules={[Pagination, A11y]}
-                            spaceBetween={50}
-                            slidesPerView={1.3}
+                            modules={[Pagination]}
+                            spaceBetween={45}
+                            slidesPerView={1.2}
                             pagination={{ clickable: true }}
                         >
                             <SwiperSlide>
