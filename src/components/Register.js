@@ -9,7 +9,7 @@ const Register = () => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        navigate('/', { replace: true })
+        navigate('/dashboard', { replace: true })
     }
     function clickHandler(curr) {
         curr.current.classList.toggle('active');

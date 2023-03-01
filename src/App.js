@@ -7,7 +7,10 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import NotFound from './components/NotFound';
-import AccDashboard from './components/AccDashboard';
+import Dashboard from './components/Dashboard';
+import Bookings from './components/Bookings';
+import Services from './components/Services';
+import Profile from './components/Profile';
 
 
 function App() {
@@ -25,7 +28,10 @@ function App() {
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/dashboard' element={<AccDashboard />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/booking' element={<Bookings />} />
+        <Route path='/service' element={<Services />} />
+        <Route path='/profile' element={<Profile />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>

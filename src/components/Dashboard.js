@@ -1,11 +1,13 @@
 import AccNavbar from "./AccNavbar";
+import Footer from "./Footer";
 
-const AccDashboard = () => {
+const Dashboard = () => {
     return (
         <>
             <AccNavbar />
+            <Footer />
         </>
     );
 }
 
-export default AccDashboard;
+export default Dashboard;

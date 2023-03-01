@@ -44,10 +44,6 @@ const Navbar = () => {
                             style={({ isActive }) => ({ color: isActive ? "#f5ba31" : "" })}>
                             Gallery
                         </NavLink>
-                        <NavLink to='/dashboard'
-                            style={({ isActive }) => ({ color: isActive ? "#f5ba31" : "" })}>
-                            Dashboard
-                        </NavLink>
 
                         <div className="authenticate">
                             <Link to='/login'>Log In</Link>

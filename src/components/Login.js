@@ -10,7 +10,7 @@ const Login = () => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        navigate('/', { replace: true })
+        navigate('/dashboard', { replace: true })
     }
     function handleClick() {
         togglePass.current.classList.toggle('active');

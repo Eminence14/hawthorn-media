@@ -21,7 +21,9 @@ const Home = () => {
                     <p>
                         Creating Timeless Moments. Capturing <span> Luxury </span> in Every Frame.
                     </p>
-                    <button>Book Us Now</button>
+                    <Link to='/booking'>
+                        <button>Book Us Now</button>
+                    </Link>
                 </section>
                 <section className="gallery">
                     <div className="right_tri"></div>
@@ -58,7 +60,9 @@ const Home = () => {
                         <li>Videography</li>
                         <li>Cooperate events etc.</li>
                     </ul>
-                    <button>Get Started</button>
+                    <Link to='/register'>
+                        <button>Get Started</button>
+                    </Link>
                 </section>
                 <section className="ceo">
                     <div className="left">
