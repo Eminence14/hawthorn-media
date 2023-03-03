@@ -2,7 +2,9 @@
 	--primary: #111;
 	--secondary: #f5ba31;
 	--red: #eb1717;
-	--roboto: Roboto, sans-serif;
+	--light-gray: #0001;
+	--deep-gray: #0008;
+	--ProductSans: ProductSans, sans-serif;
 }
 
 * {
@@ -15,25 +17,21 @@
 	list-style: none;
 	box-sizing: border-box;
 	text-decoration: none;
-	font-family: Bodoni, serif;
+	font-family: ProductSans, serif;
 }
 
-button,  a {
+button,
+a {
 	cursor: pointer;
 }
 
 @font-face {
-	font-family: Bodoni;
-	src: url("./assets/fonts/BodoniModa.ttf");
-}
-
-@font-face {
-	font-family: Roboto;
-	src: url("./assets/fonts/Roboto-Regular.ttf");
+	font-family: ProductSans;
+	src: url("./assets/fonts/ProductSans.ttf");
 }
 
 body {
-	font-family: Bodoni, serif;
+	font-family: ProductSans, serif;
 	font-size: 16px;
 }
 
@@ -69,7 +67,7 @@ body {
 }
 
 .navbar * {
-	font-family: Bodoni, serif;
+	font-family: ProductSans, serif;
 	font-weight: 700;
 	font-size: 1.1em;
 }
@@ -409,7 +407,7 @@ section.choose h1 {
 	width: 90%;
 	margin: 1em auto;
 	border-radius: 10px;
-	font-family: var(--roboto);
+	font-family: var(--ProductSans);
 	word-spacing: 3px;
 	line-height: 1.5em;
 }
@@ -485,7 +483,7 @@ section.subscribe {
 }
 
 .about_us p {
-	font-family: var(--roboto);
+	font-family: var(--ProductSans);
 	line-height: 20px;
 }
 
@@ -547,7 +545,7 @@ section.subscribe {
 }
 
 .contact_us .info_card span {
-	font-family: var(--roboto);
+	font-family: var(--ProductSans);
 }
 
 .send_message {
@@ -555,7 +553,7 @@ section.subscribe {
 }
 
 .send_message h3 {
-	font-family: var(--roboto);
+	font-family: var(--ProductSans);
 	color: var(--secondary);
 	margin-bottom: 1em;
 }
@@ -570,7 +568,7 @@ section.subscribe {
 .send_message form textarea {
 	background-color: white;
 	padding: 1em;
-	font-family: var(--roboto);
+	font-family: var(--ProductSans);
 	border: 2px solid var(--secondary);
 	border-radius: 10px;
 }
@@ -580,12 +578,12 @@ section.subscribe {
 }
 
 .send_message form input::placeholder {
-	font-family: var(--roboto);
+	font-family: var(--ProductSans);
 }
 
 .send_message button {
 	width: 120px;
-	font-family: var(--roboto);
+	font-family: var(--ProductSans);
 	font-weight: 400;
 }
 
@@ -804,7 +802,7 @@ footer .bottom .left {
 	outline: 0;
 	background-size: 20px;
 	padding-left: 3.5em;
-	font-family: Bodoni, serif;
+	font-family: ProductSans, serif;
 	font-size: 1.2em;
 }
 
@@ -813,7 +811,7 @@ footer .bottom .left {
 }
 
 input::placeholder {
-	font-family: Bodoni, serif;
+	font-family: ProductSans, serif;
 	font-weight: 900;
 	color: #0000004d;
 }
@@ -868,7 +866,7 @@ input::placeholder {
 .auth_container form button {
 	background-color: var(--secondary);
 	color: var(--primary);
-	font-family: Bodoni;
+	font-family: ProductSans;
 	font-weight: bold;
 	display: block;
 	width: 220px;
@@ -979,7 +977,7 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 	padding: 0em 1em;
 	position: relative;
 	display: flex;
-	justify-content:space-between;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -1069,17 +1067,205 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 	transform: translateY(0%);
 }
 
-
-
 /* ACCOUNT NAVBAR ENDS */
 
 
 
-/* ACCOUNT NAVBAR ENDS */
+/* DASHBOARD STYLES BEGINS */
+.dashboard {
+	min-height: 80vh;
+	background-color: var(--light-gray);
+	padding: 5em 1em;
+}
+
+.dashboard * {
+	font-family: var(--ProductSans);
+}
+
+.dashboard h1 {
+	text-align: center;
+	font-size: 1.3em;
+	margin-bottom: 2em;
+}
+
+.dash-stats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5em;
+}
+
+.dash-stats-card {
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 1.5em 1em;
+	border-radius: 10px;
+}
+
+.dash-stats-card span {
+	display: block;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.dash-stats-card span:nth-child(1) {
+	color: var(--deep-gray);
+}
+
+.dash-cta {
+	margin-top: 4em;
+}
+
+.dash-cta h1 {
+	font-size: 1.7em;
+	width: 67%;
+	margin: 0 auto 1em;
+	text-align: center;
+}
+
+.dash-cta p {
+	line-height: 22px;
+}
+
+.dash-cta a {
+	display: block;
+	margin: 1em auto 0;
+	background-color: var(--secondary);
+	color: var(--primary);
+	padding: 1.2em;
+	width: 120px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+/* DASHBOARD STYLES ENDS */
 
 
 
 
+/* BOOKING STYLES BEGINS */
+
+.booking {
+	background-color: var(--light-gray);
+	min-height: 80vh;
+	padding: 5em 1em;
+	text-align: center;
+}
+
+.booking * {
+	font-family: var(--ProductSans);
+	font-size: .9em;
+}
+
+.booking h1 {
+	font-size: 1.5em;
+}
+
+.booking span {
+	display: block;
+	margin-top: 1em;
+}
+
+.booking-table {
+	background-color: white;
+	width: 100%;
+	margin-top: 3em;
+	padding: 2em 1em;
+	border-radius: 10px;
+	box-shadow: 20px 20px 60px #bebebeda,
+		-20px -20px 60px #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.booking-table table tr {
+	display: flex;
+	align-items: center;
+	padding-bottom: 1.5em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.booking-table table thead tr {
+	padding: 0;
+	border: 0;
+	font-size: 1em;
+}
+
+.booking-table th {
+	width: 100%;
+	font-weight: 100;
+	display: block;
+	white-space: nowrap;
+	text-transform: uppercase;
+	color: var(--deep-gray);
+}
+
+.booking-table td {
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.booking-table span.booked {
+	color: var(--deep-gray);
+}
+
+/* BOOKING STYLES ENDS */
+
+
+
+
+
+/* PROFILE STYLES BEGINS */
+
+.profile-container {
+	min-height: 80vh;
+	background-color: var(--light-gray);
+	padding-top: 5em;
+}
+.profile {
+	background-color: white;
+	width: 90%;
+	margin: 0 auto;
+	padding: 1.5em 1em;
+}
+.profile button, .profile a {
+	font-weight: 100;
+}
+.profile header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.profile header h1 {
+	font-size: 1.6em;
+}
+.profile form {
+	margin: 5em 1em 0;
+}
+.profile form input{
+	width: 100%;
+	padding: 1em;
+	border: 1px solid var(--light-gray);
+	border-radius: 10px;
+	margin-bottom: 1em;
+}
+.profile form a {
+	background-color: var(--secondary);
+	color: var(--primary);
+	border-radius: 10px;
+	text-align: center;
+	display: block;
+	width: 150px;
+	padding: 1em;
+	margin: 1em auto 0;
+}
+
+/* PROFILE STYLES ENDS */
 
 
 

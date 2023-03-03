@@ -11,6 +11,7 @@ import Dashboard from './components/Dashboard';
 import Bookings from './components/Bookings';
 import Services from './components/Services';
 import Profile from './components/Profile';
+import ChangePassword from './components/ChangePassword';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/booking' element={<Bookings />} />
         <Route path='/service' element={<Services />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/reset-pwd' element={<ChangePassword />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>

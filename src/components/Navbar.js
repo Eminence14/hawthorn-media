@@ -34,11 +34,11 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink to='/about'
                             style={({ isActive }) => ({ color: isActive ? "#f5ba31" : "" })}>
-                            About
+                            About Us
                         </NavLink>
                         <NavLink to='/contact'
                             style={({ isActive }) => ({ color: isActive ? "#f5ba31" : "" })}>
-                            Contact
+                            Contact Us
                         </NavLink>
                         <NavLink to='/gallery'
                             style={({ isActive }) => ({ color: isActive ? "#f5ba31" : "" })}>
