@@ -4,9 +4,13 @@ import ActiveBook from '../assets/images/active-booking.svg';
 import CompleteBook from '../assets/images/completed-booking.svg';
 import TotalBook from '../assets/images/total-booking.svg';
 import { Link } from "react-router-dom";
+import { useLayoutEffect } from "react";
 
 
 const Dashboard = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <AccNavbar />

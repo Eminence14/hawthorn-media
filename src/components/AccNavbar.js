@@ -7,7 +7,7 @@ import ServiceImg from '../assets/images/services.svg';
 import ProfImg from '../assets/images/profile.svg';
 import LogImg from '../assets/images/log_out.svg';
 import { NavLink } from 'react-router-dom';
-import { useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 const AccNavbar = () => {
 
     const opener = useRef()
@@ -23,6 +23,9 @@ const AccNavbar = () => {
         closer.current.classList.remove('active')
         overlay.current.classList.remove('active')
     }
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div className="acc_navbar">

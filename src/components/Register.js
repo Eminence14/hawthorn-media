@@ -1,8 +1,11 @@
-import { useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../assets/images/Hawthorn Studios Yellow.png';
 
 const Register = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     const togglePass = useRef()
     const togglePass2 = useRef()
     const navigate = useNavigate();

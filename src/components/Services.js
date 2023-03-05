@@ -1,7 +1,11 @@
+import { useLayoutEffect } from "react"
 import AccNavbar from "./AccNavbar"
 import Footer from "./Footer"
 
 const Services = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <AccNavbar />

@@ -10,9 +10,13 @@ import { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useLayoutEffect } from "react";
 
 
 const Home = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <Navbar />

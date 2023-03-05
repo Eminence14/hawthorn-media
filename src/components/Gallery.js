@@ -11,8 +11,12 @@ import img3 from "../assets/images/gallery/img3.jpg";
 import img4 from "../assets/images/gallery/img4.jpg";
 import img5 from "../assets/images/gallery/img5.jpg";
 import img6 from "../assets/images/gallery/img6.jpg";
+import { useLayoutEffect } from "react";
 
 const Gallery = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const pagination = {
         clickable: true,

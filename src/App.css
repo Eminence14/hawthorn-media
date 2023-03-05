@@ -1227,34 +1227,42 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 	background-color: var(--light-gray);
 	padding-top: 5em;
 }
+
 .profile {
 	background-color: white;
 	width: 90%;
 	margin: 0 auto;
 	padding: 1.5em 1em;
 }
-.profile button, .profile a {
+
+.profile button,
+.profile a {
 	font-weight: 100;
 }
+
 .profile header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
+
 .profile header h1 {
 	font-size: 1.6em;
 }
+
 .profile form {
 	margin: 5em 1em 0;
 }
-.profile form input{
+
+.profile form input {
 	width: 100%;
 	padding: 1em;
 	border: 1px solid var(--light-gray);
 	border-radius: 10px;
 	margin-bottom: 1em;
 }
-.profile form a {
+
+.profile form button {
 	background-color: var(--secondary);
 	color: var(--primary);
 	border-radius: 10px;

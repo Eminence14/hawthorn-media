@@ -4,11 +4,17 @@ import Phone from "../assets/images/phone.svg";
 import Email from "../assets/images/email.svg";
 import Location from "../assets/images/location.svg";
 import Map from "../assets/images/map.svg";
+import { useLayoutEffect } from "react";
 
 const Contact = () => {
     function handleSubmit(e) {
         e.preventDefault()
     }
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className="contact_page">
             <Navbar />

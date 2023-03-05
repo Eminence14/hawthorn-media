@@ -1,7 +1,11 @@
+import { useLayoutEffect } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const About = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div>
             <Navbar />
