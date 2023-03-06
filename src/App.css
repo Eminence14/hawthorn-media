@@ -123,7 +123,6 @@ body {
 
 .mobile_nav>div ul a:hover {
 	color: var(--secondary);
-	text-decoration: underline;
 }
 
 .navbar .authenticate {
@@ -182,8 +181,7 @@ body {
 	justify-content: center;
 	gap: 1em;
 	color: white;
-	height: 260px;
-	padding: 2em;
+	padding: 4em 2em;
 	background-image: linear-gradient(to bottom,
 			rgba(0, 0, 0, 0.5) 0%,
 			rgba(0, 0, 0, 0.5) 100%),
@@ -195,8 +193,8 @@ body {
 
 .home .hero p {
 	font-size: 1.8em;
-	display: block;
-	margin: 0 auto;
+	width: 100%;
+	max-width: 500px;
 }
 
 .home .hero p span {
@@ -217,7 +215,6 @@ body {
 .home .hero button:hover {
 	background-color: var(--primary);
 	color: var(--secondary);
-	/* cursor: pointer; */
 }
 
 .home .gallery {
@@ -247,9 +244,8 @@ body {
 
 .galleries .swiper {
 	height: 300px;
-	width: 100%;
-	max-width: 450px;
-	margin-right: 0;
+	width: 400px;
+	margin: 0 auto;
 	padding-left: 1.8em;
 	padding-right: 1.8em;
 }
@@ -278,7 +274,8 @@ body {
 
 .galleries img {
 	width: 300px;
-	height: 250px;
+	aspect-ratio: 4/3;
+	/* height: 250px; */
 	object-fit: cover;
 	border-radius: 10px;
 	display: block;

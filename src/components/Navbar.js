@@ -28,7 +28,7 @@ const Navbar = () => {
                 <div ref={closer} className="closer">
                     <ul>
                         <img src={Close} alt="" className="close" onClick={closeHam} />
-                        <NavLink to='/'
+                        <NavLink className="home-link" to='/'
                             style={({ isActive }) => ({ color: isActive ? "#f5ba31" : "" })}>
                             Home
                         </NavLink>

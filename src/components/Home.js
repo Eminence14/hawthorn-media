@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import GallPreview1 from '../assets/images/gallery_preview1.jpeg'
 import GallPreview2 from '../assets/images/gallery_preview2.jpeg'
-import GallPreview3 from '../assets/images/gallery_preview3.png'
+import GallPreview3 from '../assets/images/gallery_preview3_1.svg'
 import Services from '../assets/images/our_services1.jpg'
 import Ceo from '../assets/images/ceo.jpg'
 import { Link } from "react-router-dom";
@@ -36,8 +36,26 @@ const Home = () => {
                         <Swiper
                             modules={[Pagination]}
                             spaceBetween={45}
-                            slidesPerView={1.2}
+                            slidesPerView={1.15}
                             pagination={{ clickable: true }}
+                            breakpoints={{
+                                400: {
+                                    width: 400,
+                                    slidesPerView: 1.2,
+                                },
+                                550: {
+                                    width: 550,
+                                    slidesPerView: 1.5,
+                                },
+                                650: {
+                                    width: 650,
+                                    slidesPerView: 1.8,
+                                },
+                                768: {
+                                    width: 768,
+                                    slidesPerView: 2,
+                                },
+                            }}
                         >
                             <SwiperSlide>
                                 <img src={GallPreview1} alt="" />
