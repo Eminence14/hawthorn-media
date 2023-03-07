@@ -6,7 +6,7 @@ import Services from '../assets/images/our_services1.jpg'
 import Ceo from '../assets/images/ceo.jpg'
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
-import { Pagination, A11y } from 'swiper';
+import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -36,26 +36,8 @@ const Home = () => {
                         <Swiper
                             modules={[Pagination]}
                             spaceBetween={45}
-                            slidesPerView={1.15}
+                            slidesPerView={1.1}
                             pagination={{ clickable: true }}
-                            breakpoints={{
-                                400: {
-                                    width: 400,
-                                    slidesPerView: 1.2,
-                                },
-                                550: {
-                                    width: 550,
-                                    slidesPerView: 1.5,
-                                },
-                                650: {
-                                    width: 650,
-                                    slidesPerView: 1.8,
-                                },
-                                768: {
-                                    width: 768,
-                                    slidesPerView: 2,
-                                },
-                            }}
                         >
                             <SwiperSlide>
                                 <img src={GallPreview1} alt="" />

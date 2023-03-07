@@ -82,6 +82,7 @@
     }
 
 
+
     /* HOME ENDS HERE */
 
 
@@ -98,4 +99,19 @@
 
 
 
+}
+
+
+
+
+@media screen and (min-width: 600px) {
+    /* .galleries .swiper {
+        height: 500px;
+        width: 100%;
+        max-width: 500px;
+        margin: 0;
+        padding: 0;
+        /* display: grid;
+        flex-direction: column;
+    } */
 }

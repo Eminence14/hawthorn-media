@@ -244,7 +244,8 @@ body {
 
 .galleries .swiper {
 	height: 300px;
-	width: 400px;
+	width: 100%;
+	max-width: 450px;
 	margin: 0 auto;
 	padding-left: 1.8em;
 	padding-right: 1.8em;
@@ -273,13 +274,13 @@ body {
 }
 
 .galleries img {
-	width: 300px;
+	width: 100%;
+	max-width: 350px;
 	aspect-ratio: 4/3;
 	/* height: 250px; */
 	object-fit: cover;
 	border-radius: 10px;
 	display: block;
-	box-shadow: 3px 3px 10px #f5ba3141;
 	position: relative;
 	z-index: 2;
 }
