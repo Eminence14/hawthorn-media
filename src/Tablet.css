@@ -52,6 +52,7 @@
 
     .home-link {
         margin-left: auto;
+        padding-left: 10%;
     }
 
     /* NAVBAR ENDS HERE */
@@ -128,7 +129,7 @@
         padding-left: 6em;
         text-align: justify;
         width: 100%;
-        border-radius: 5% 0% 0% 25% / 5% 0% 0%95%;
+        border-radius: 5% 0% 0% 25% / 5% 0% 0% 95%;
     }
 
     .subscribe h1 {
@@ -147,5 +148,46 @@
     }
 
     /* HOME ENDS HERE */
+
+
+
+
+    /* ABOUT BEGINS HERE */
+
+    .back_logo {
+        height: 450px;
+    }
+
+    .about_us {
+        padding: 4em;
+        text-align: justify;
+    }
+
+    .about_us h1 {
+        font-size: 1.8rem;
+    }
+
+    .about_us p {
+        line-height: 1.4em;
+        font-size: 1.25rem;
+    }
+
+    /* ABOUT ENDS HERE */
+
+
+
+
+    /* CONTACT US BEGINS HERE */
+
+    .contact_us .info_card {
+        width: 60%;
+    }
+
+    .send_message {
+        padding: 3em;
+    }
+
+    /* CONTACT US ENDS HERE */
+
 
 }
