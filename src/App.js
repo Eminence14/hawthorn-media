@@ -18,10 +18,6 @@ import ChangePassword from './components/ChangePassword';
 function App() {
   return (
     <div className='App'>
-      {/* <a href="javascript:window.open('http://localhost:3000/', '', 'width: 375px , height: auto')">
-        window
-      </a> */}
-
 
       <Routes>
         <Route path='/' element={<Home />} />

@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import GallPreview1 from '../assets/images/gallery_preview1.jpeg'
 import GallPreview2 from '../assets/images/gallery_preview2.jpeg'
-import GallPreview3 from '../assets/images/gallery_preview3_1.svg'
+import GallPreview3 from '../assets/images/gallery_preview3.png'
 import Services from '../assets/images/our_services1.jpg'
 import Ceo from '../assets/images/ceo.jpg'
 import { Link } from "react-router-dom";
@@ -36,6 +36,7 @@ const Home = () => {
                         <Swiper
                             modules={[Pagination]}
                             spaceBetween={45}
+                            slidesPerView={1.2}
                             slidesPerView={1.1}
                             pagination={{ clickable: true }}
                         >
