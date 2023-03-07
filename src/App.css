@@ -249,11 +249,10 @@ body {
 	height: 300px;
 	width: 100%;
 	max-width: 450px;
-<<<<<<< HEAD
 	margin: 0 auto;
-=======
+	width: 100%;
+	max-width: 450px;
 	margin-right: 0;
->>>>>>> parent of df0e9dd (fix 'em bugs)
 	padding-left: 1.8em;
 	padding-right: 1.8em;
 }
@@ -281,15 +280,9 @@ body {
 }
 
 .galleries img {
-<<<<<<< HEAD
-	width: 100%;
-	max-width: 350px;
+	width: 300px;
 	aspect-ratio: 4/3;
 	/* height: 250px; */
-=======
-	width: 300px;
-	height: 250px;
->>>>>>> parent of df0e9dd (fix 'em bugs)
 	object-fit: cover;
 	border-radius: 10px;
 	display: block;
