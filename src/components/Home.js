@@ -37,7 +37,6 @@ const Home = () => {
                             modules={[Pagination]}
                             spaceBetween={45}
                             slidesPerView={1.2}
-                            slidesPerView={1.1}
                             pagination={{ clickable: true }}
                         >
                             <SwiperSlide>
