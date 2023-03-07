@@ -393,6 +393,10 @@ section.choose {
 	color: var(--secondary);
 }
 
+section.choose img {
+	display: none;
+}
+
 section.choose h1 {
 	font-size: 1.4em;
 	text-align: center;

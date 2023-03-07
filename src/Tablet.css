@@ -7,12 +7,12 @@
     /* NAVBAR STARTS HERE */
 
     .navbar {
-
         padding-bottom: 0;
     }
 
     .navbar .logo {
-        width: 120px;
+        width: 90px;
+        height: 90px;
     }
 
     .navbar .mobile_nav {
@@ -81,7 +81,70 @@
         max-width: 350px;
     }
 
+    .home .services>div {
+        display: flex;
+        gap: 3em;
+        align-items: center;
+        padding: 0 4em;
+    }
 
+    .home .services>div>div {
+        flex: 1;
+    }
+
+    .home .services>div>picture>img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .home .ceo {
+        padding-left: 3em;
+    }
+
+    .ceo>div.left * {
+        height: 100%;
+        width: 250px;
+    }
+
+    .ceo>div.right {
+        width: 30%;
+    }
+
+    section.choose img {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    section.choose>div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .choose p {
+        margin-right: 0;
+        padding: 2em;
+        padding-left: 6em;
+        text-align: justify;
+        width: 100%;
+        border-radius: 5% 0% 0% 25% / 5% 0% 0%95%;
+    }
+
+    .subscribe h1 {
+        font-size: 1.7rem;
+        margin-bottom: 1em;
+    }
+
+    .subscribe label {
+        display: none;
+    }
+
+    .subscribe input {
+        width: 70%;
+        display: block;
+        margin: 0 auto 1.5em;
+    }
 
     /* HOME ENDS HERE */
 
