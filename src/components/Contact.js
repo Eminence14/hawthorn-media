@@ -78,7 +78,7 @@ const Contact = () => {
                 </section>
                 <section className="map">
                     <h1>Find Us On Google Map</h1>
-                    <img src={Map} alt="" />
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.818476708246!2d7.4857576!3d9.0802955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0bed185d5e79%3A0x920ef91f1e5d993!2sHawthorn%20Studios%2C%20Abuja!5e0!3m2!1sen!2sng!4v1678273628607!5m2!1sen!2sng" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </section>
             </div>
             <Footer />
