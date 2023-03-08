@@ -188,8 +188,9 @@
     }
 
     .contact_us .map iframe {
-        width: 100%;
+        width: 95%;
         height: 450px;
+        max-width: 950px;
     }
 
     /* CONTACT US ENDS HERE */
