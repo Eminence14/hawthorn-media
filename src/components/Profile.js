@@ -22,7 +22,7 @@ const Profile = () => {
         e.preventDefault()
     }
     return (
-        <>
+        <div className="tablet">
             <AccNavbar />
             <div className="profile-container">
                 {
@@ -73,7 +73,7 @@ const Profile = () => {
                 }
             </div>
             <Footer />
-        </>
+        </div>
     )
 }
 

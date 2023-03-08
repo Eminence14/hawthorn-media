@@ -44,6 +44,18 @@
         justify-content: end;
     }
 
+    .navbar .authenticate a:nth-child(1):hover {
+        background-color: transparent;
+        color: var(--secondary);
+    }
+
+    .navbar .authenticate a:nth-child(2):hover {
+        color: var(--secondary);
+        border: 0px;
+        background-color: var(--primary);
+        text-decoration: none;
+    }
+
     .mobile_nav>div ul a,
     .navbar .authenticate a:nth-child(1) {
         color: white;
@@ -195,5 +207,135 @@
 
     /* CONTACT US ENDS HERE */
 
+
+
+    /* GALLERY BEGINS HERE */
+
+    /* GALLERY ENDS HERE */
+
+
+
+
+
+
+
+
+
+
+
+    /* ACCOUNT PAGES BEGINS HERE */
+
+    /* ACCOUNT NAVBAR BEGINS */
+
+
+    .acc_navbar {
+        background-color: white;
+        padding: 0;
+        position: relative;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .acc_navbar .mobile_nav {
+        height: 100%;
+    }
+
+    .acc_navbar>.logo {
+        display: none;
+    }
+
+    .acc_navbar .logo {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .acc_navbar .acc_closer {
+        position: relative;
+        background-color: white;
+        transform: translate(0);
+        width: 6em;
+        height: 100%;
+        border-radius: 0px;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .acc_navbar .nav-titles {
+        visibility: hidden;
+        white-space: nowrap;
+        transform: translateX(-10vw);
+        background-color: var(--secondary);
+        padding: 1em;
+        border-radius: 5px;
+        opacity: 0;
+        transition: all 200ms;
+    }
+
+    .acc_closer a {
+        padding: 0.4em 0.6em;
+    }
+
+    .acc_navbar a:hover .nav-titles {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    .acc_closer a img {
+        width: 100%;
+        max-width: 25px;
+        height: 30px;
+        transform: translateX(7px);
+        margin-right: .5em;
+    }
+
+
+    /* ACCOUNT NAVBAR ENDS */
+
+
+
+
+
+
+
+
+
+    .tablet {
+        display: grid;
+        grid-template-areas:
+            'navbar main'
+            'footer footer'
+        ;
+        grid-template-columns: 6em 1fr;
+    }
+
+    .acc_navbar {
+        grid-area: navbar;
+    }
+
+    .tablet .dashboard,
+    .tablet .booking {
+        grid-area: main;
+        padding: 3em;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+
+
+
+
+
+    .dash-cta a {
+        width: 200px;
+    }
+
+
+
+
+    /* ACCOUNT PAGES ENDS HERE */
 
 }

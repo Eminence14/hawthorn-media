@@ -29,7 +29,7 @@ const AccNavbar = () => {
 
     return (
         <div className="acc_navbar">
-            
+
             <nav className="mobile_nav">
                 <img src={Hamburger} alt="" className='hamburger' ref={opener} onClick={openHam} />
                 <div className='acc_closer' ref={closer}>
@@ -40,27 +40,27 @@ const AccNavbar = () => {
                     <NavLink to='/dashboard'
                         style={({ isActive }) => ({ backgroundColor: isActive ? "#f5ba31" : "" })}>
                         <img src={DashImg} alt="" />
-                        Dashboard
+                        <span className='nav-titles'>Dashboard</span>
                     </NavLink>
                     <NavLink to='/booking'
                         style={({ isActive }) => ({ backgroundColor: isActive ? "#f5ba31" : "" })}>
                         <img src={BookImg} alt="" />
-                        Your bookings
+                        <span className='nav-titles'>Your bookings</span>
                     </NavLink>
                     <NavLink to='/service'
                         style={({ isActive }) => ({ backgroundColor: isActive ? "#f5ba31" : "" })}>
                         <img src={ServiceImg} alt="" />
-                        Services
+                        <span className='nav-titles'>Services</span>
                     </NavLink>
                     <NavLink to='/profile'
                         style={({ isActive }) => ({ backgroundColor: isActive ? "#f5ba31" : "" })}>
                         <img src={ProfImg} alt="" />
-                        Profile
+                        <span className='nav-titles'>Profile</span>
                     </NavLink>
                     <NavLink to='/'
                         style={({ isActive }) => ({ backgroundColor: isActive ? "#f5ba31" : "" })}>
                         <img src={LogImg} alt="" />
-                        Log out
+                        <span className='nav-titles'>Log out</span>
                     </NavLink>
                 </div>
             </nav>

@@ -7,7 +7,7 @@ const Bookings = () => {
         window.scrollTo(0, 0)
     }, [])
     return (
-        <>
+        <div className="tablet">
             <AccNavbar />
             <div className="booking">
                 <h1>Your Bookings</h1>
@@ -47,7 +47,7 @@ const Bookings = () => {
 
             </div>
             <Footer />
-        </>
+        </div>
     );
 }
 

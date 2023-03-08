@@ -12,8 +12,8 @@ const Dashboard = () => {
         window.scrollTo(0, 0)
     }, [])
     return (
-        <>
-            <AccNavbar />
+        <div className="tablet">
+            <AccNavbar className='tablet-nav' />
             <div className="dashboard">
                 <h1>Account Summary</h1>
                 <div className="dash-stats">
@@ -47,8 +47,8 @@ const Dashboard = () => {
                     <Link to='/booking'>Start Booking</Link>
                 </div>
             </div>
-            <Footer />
-        </>
+            <Footer className='' />
+        </div>
     );
 }
 

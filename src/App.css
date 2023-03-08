@@ -1050,7 +1050,6 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 	gap: .5em;
 	font-weight: 700;
 	margin: 0 auto;
-	/* cursor: pointer; */
 }
 
 .acc_closer a:hover {
