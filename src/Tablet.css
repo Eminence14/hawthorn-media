@@ -4,6 +4,10 @@
         font-size: 16px;
     }
 
+    .auth_container main {
+        max-width: 650px;
+    }
+
     /* NAVBAR STARTS HERE */
 
     .navbar {
@@ -503,6 +507,110 @@
         width: 100%;
     }
 
-
     /* contact styles ends */
+
+
+
+
+    /* gallery styles begins */
+
+    .main_gallery .swiper {
+        width: 95%;
+        max-width: 1150px;
+        height: 600px;
+        margin-bottom: 5em;
+    }
+
+    .main_gallery .swiper-slide {
+        height: 500px;
+    }
+
+    .main_gallery .swiper-button-prev,
+    .main_gallery .swiper-button-next {
+        top: 92%;
+        transform: scale(.4);
+    }
+
+    .main_gallery .swiper-button-prev {
+        left: 40%;
+    }
+
+    .main_gallery .swiper-button-next {
+        right: 40%;
+    }
+
+    /* gallery styles ends */
+
+
+    /* login & register styles begins */
+    .auth_container {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1em 3em;
+        max-height: 100%;
+    }
+
+    .auth_container * {
+        font-size: 15px;
+    }
+
+    .auth_container header {
+        display: none;
+    }
+
+    .auth-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .auth_container .auth-right {
+        position: relative;
+        width: 700px;
+        height: 90vh;
+        background-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0.3) 0%,
+                rgba(0, 0, 0, 0.4) 100%),
+            url("./assets/images/our_services1_1.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+        border-radius: 10px;
+    }
+
+    .auth_container .auth-right img {
+        object-fit: cover;
+    }
+
+    .auth_container form input {
+        padding: .5em;
+        padding-left: 2.3em;
+        margin: .5em 0 .8em;
+        width: 135%;
+    }
+
+    .auth_container input::placeholder {
+        font-weight: 100;
+        font-size: .8rem;
+    }
+
+    .auth_container form button {
+        margin: 1em auto 0;
+        padding: 0.6em 3em;
+    }
+
+    .auth_container .trans-right {
+        transform: translateX(35%);
+    }
+
+    .auth_container>div>a {
+        left: 15%;
+    }
+
+    .pass_options {
+        width: 135%;
+    }
+
+    /* login & register styles ends */
 }
