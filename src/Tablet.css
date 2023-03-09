@@ -493,15 +493,16 @@
         font-size: 2.2em;
     }
 
-    /* .contact_us {
+    .contact_us>div {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        padding-right: 3em;
     }
 
-    .contact_us>* {
-        flex: 1;
-    } */
+    .contact_us>div>* {
+        width: 100%;
+    }
+
 
     /* contact styles ends */
 }
