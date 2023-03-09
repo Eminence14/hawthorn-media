@@ -315,6 +315,26 @@
 
 
 
+    /* ACCOUNT PROFILE BEGINS */
+
+    .tablet .profile {
+        width: 100%;
+    }
+
+    /* ACCOUNT PROFILE ENDS */
+
+
+
+
+
+    /* ACCOUNT DASHBOARD BEGINS */
+
+    .tablet .dash-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ACCOUNT DASHBOARD ENDS */
 
 
 
@@ -333,18 +353,15 @@
         grid-area: navbar;
     }
 
-    .tablet .dashboard,
-    .tablet .booking {
+    .tablet>div:nth-child(2) {
         grid-area: main;
         padding: 3em;
     }
 
+
     footer {
         grid-area: footer;
     }
-
-
-
 
 
 
