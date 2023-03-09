@@ -4,7 +4,7 @@ import GallPreview2 from '../assets/images/gallery_preview2.jpeg'
 import GallPreview3 from '../assets/images/gallery_preview3.png'
 import Services from '../assets/images/our_services1.jpg'
 import Services1 from '../assets/images/our_services1_1.svg'
-import Ceo from '../assets/images/ceo.jpg'
+import Ceo from '../assets/images/ceo_1.jpg'
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import { Pagination } from 'swiper';
@@ -13,7 +13,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { useLayoutEffect } from "react";
 import Logo from '../assets/images/Hawthorn Studios Yellow.png';
-
 
 const Home = () => {
     useLayoutEffect(() => {
