@@ -340,6 +340,10 @@
         text-align: center;
     }
 
+    .dash-cta a {
+        width: 200px;
+    }
+
     /* ACCOUNT DASHBOARD ENDS */
 
 
@@ -383,20 +387,13 @@
 
     .tablet>div:nth-child(2) {
         grid-area: main;
-        padding: 3em;
+        padding: 5em 3em 3em;
     }
 
 
     footer {
         grid-area: footer;
     }
-
-
-
-    .dash-cta a {
-        width: 200px;
-    }
-
 
 
 
@@ -542,6 +539,8 @@
     /* gallery styles ends */
 
 
+
+
     /* login & register styles begins */
     .auth_container {
         flex-direction: row;
@@ -610,6 +609,72 @@
 
     .pass_options {
         width: 135%;
+    }
+
+
+
+    /* Desktop dashboard */
+    .tablet {
+        grid-template-columns: 13em 1fr;
+    }
+
+    .acc_navbar .acc_closer {
+        width: 12em;
+        gap: 0;
+    }
+
+    .acc_navbar .nav-titles {
+        visibility: visible;
+        opacity: 1;
+        background-color: transparent;
+        transform: translateX(0);
+    }
+
+    .acc_closer a {
+        width: 90%;
+        gap: 0;
+        padding: 0.2em 0.6em;
+        margin-bottom: .5em;
+    }
+
+    .acc_closer a img {
+        margin-right: 0;
+    }
+
+
+
+
+    /* Dashboard styles begins */
+
+    .dash-stats {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .tablet .dash-cta {
+        width: 60vw;
+    }
+
+    .dash-cta h1 {
+        margin-bottom: 0.5em;
+    }
+
+    .dash-cta p {
+        text-align: center;
+        margin: 0 auto;
+        width: 50vw;
+        line-height: 1.3em;
+    }
+
+    /* Dashboard styles ends */
+
+
+    .profile form {
+        margin: 1em;
+    }
+
+    footer {
+        padding-bottom: 0em;
     }
 
     /* login & register styles ends */
