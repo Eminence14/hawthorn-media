@@ -340,6 +340,28 @@
 
 
 
+
+    /* ACCOUNT BOOKING BEGINS */
+
+    .tablet .booking span {
+        font-size: 1rem;
+        color: rgb(0, 0, 0, .7);
+    }
+
+    .tablet .booking-table table {
+        font-size: .85rem;
+        color: rgb(0, 0, 0, .7);
+    }
+
+    /* ACCOUNT BOOKING ENDS */
+
+
+
+
+
+
+
+
     .tablet {
         display: grid;
         grid-template-areas:
@@ -373,5 +395,32 @@
 
 
     /* ACCOUNT PAGES ENDS HERE */
+
+}
+
+
+
+
+/* Desktop viewport */
+
+@media screen and (min-width: 1200px) {
+
+    * {
+        font-size: 20px;
+    }
+
+    /* home styles begins */
+
+    .home section.hero {
+        padding: 12em 4em;
+    }
+
+    .home .hero p {
+        font-size: 2em;
+        max-width: 500px;
+        line-height: 60px;
+    }
+
+    /* home styles ends */
 
 }

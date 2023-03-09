@@ -42,7 +42,7 @@ const Bookings = () => {
 
                     </table>
 
-                    {/* <span className="booked">You don't have any booking yet</span> */}
+                    <span className="booked">You don't have any booking yet</span>
                 </div>
 
             </div>
