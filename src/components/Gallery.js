@@ -38,6 +38,16 @@ const Gallery = () => {
                     modules={[Pagination, Navigation]}
                     slidesPerView={1}
                     className="mySwiper"
+                    breakpoints={{
+                        768: {
+                            width: 768,
+                            slidesPerView: 2,
+                        },
+                        1200: {
+                            width: 1200,
+                            slidesPerView: 3,
+                        },
+                    }}
                 >
                     <SwiperSlide>
                         <img src={img1} alt="" />
@@ -63,5 +73,5 @@ const Gallery = () => {
         </div>
     );
 }
- 
+
 export default Gallery;

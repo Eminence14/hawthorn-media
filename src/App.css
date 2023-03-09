@@ -277,7 +277,6 @@ body {
 	width: 100%;
 	max-width: 350px;
 	aspect-ratio: 4/3;
-	/* height: 250px; */
 	object-fit: cover;
 	border-radius: 10px;
 	display: block;
