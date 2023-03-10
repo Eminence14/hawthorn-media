@@ -18,7 +18,6 @@ import ChangePassword from './components/ChangePassword';
 function App() {
   return (
     <div className='App'>
-
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

@@ -412,6 +412,11 @@
         font-size: 20px;
     }
 
+    .acc_navbar .logo {
+        width: 200px;
+        height: 150px;
+    }
+
     /* home styles begins */
 
     .home section.hero {
@@ -425,8 +430,8 @@
     }
 
     .gallery a {
-        padding: 1.3em 1.1em;
-        font-size: 1.3em;
+        padding: .8em;
+        font-size: .9em;
     }
 
     .home .services div img {
@@ -542,6 +547,13 @@
 
 
     /* login & register styles begins */
+    .pass span.open_pass {
+        left: 119%;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+    }
+
     .auth_container {
         flex-direction: row;
         justify-content: space-around;
@@ -584,7 +596,7 @@
 
     .auth_container form input {
         padding: .5em;
-        padding-left: 2.3em;
+        padding-left: 3em;
         margin: .5em 0 .8em;
         width: 135%;
     }
