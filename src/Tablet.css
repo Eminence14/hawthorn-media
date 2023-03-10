@@ -284,6 +284,7 @@
         border-radius: 0px;
         justify-content: start;
         align-items: center;
+        gap: 0.5em;
     }
 
     .acc_navbar .nav-titles {
