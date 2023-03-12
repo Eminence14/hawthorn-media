@@ -12,6 +12,7 @@ import Dashboard from './components/Dashboard';
 import Bookings from './components/Bookings';
 import Services from './components/Services';
 import Profile from './components/Profile';
+import ChangePassword from './components/ChangePassword';
 
 
 function App() {
