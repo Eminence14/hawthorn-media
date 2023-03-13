@@ -638,9 +638,6 @@ section.subscribe {
 	height: 375px;
 }
 
-.main_gallery .swiper-wrapper {
-	gap: 1em;
-}
 
 .main_gallery .swiper-slide img {
 	display: block;

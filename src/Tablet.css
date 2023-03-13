@@ -238,6 +238,10 @@
         height: 400px;
     }
 
+    .main_gallery .swiper-wrapper {
+        gap: .5em;
+    }
+
     .main_gallery .swiper-button-prev {
         left: 35%;
     }
