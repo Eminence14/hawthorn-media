@@ -648,6 +648,7 @@ section.subscribe {
 	height: 100%;
 	margin-right: 1em;
 	object-fit: cover;
+	border-radius: 10px;
 }
 
 .main_gallery .swiper-pagination-bullet {
