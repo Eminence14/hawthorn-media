@@ -747,7 +747,7 @@ footer .bottom .left {
 /*######## LOGIN AND REGISTER STYLES ########*/
 .auth_container {
 	background-color: var(--primary);
-	max-height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
