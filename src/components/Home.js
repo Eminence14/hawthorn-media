@@ -39,6 +39,16 @@ const Home = () => {
                             spaceBetween={45}
                             slidesPerView={1.2}
                             pagination={{ clickable: true }}
+                            breakpoints={{
+                                768: {
+                                    width: 768,
+                                    slidesPerView: 2,
+                                },
+                                1200: {
+                                    width: 1200,
+                                    slidesPerView: 3,
+                                },
+                            }}
                         >
                             <SwiperSlide>
                                 <img src={GallPreview1} alt="" />

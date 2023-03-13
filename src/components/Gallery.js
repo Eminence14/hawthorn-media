@@ -37,7 +37,6 @@ const Gallery = () => {
                     pagination={pagination}
                     modules={[Pagination, Navigation]}
                     slidesPerView={1}
-                    className="mySwiper"
                     breakpoints={{
                         768: {
                             width: 768,
