@@ -294,6 +294,8 @@ body {
 	text-align: center;
 	width: max-content;
 	cursor: pointer;
+	position: relative;
+	z-index: 3;
 }
 
 .home .services {
