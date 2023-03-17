@@ -771,6 +771,8 @@ footer .bottom .left {
 	background-color: var(--primary);
 	color: white;
 	padding: 0 0 50px 1em;
+	height: 100vh;
+	position: relative;
 }
 
 .auth_container header img {
