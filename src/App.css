@@ -764,7 +764,8 @@ footer .bottom .left {
 /*######## LOGIN AND REGISTER STYLES ########*/
 .auth_container {
 	background-color: var(--primary);
-	max-height: 100vh;
+	min-height: 97vh;
+	height: 100%;
 	color: white;
 	padding: 0 0 50px 1em;
 	position: relative;
