@@ -297,8 +297,9 @@ body {
 	display: block;
 	margin: .5em auto 0;
 	text-align: center;
-	width: max-content;
+	width: fit-content;
 	cursor: pointer;
+	white-space: nowrap;
 	position: relative;
 	z-index: 3;
 }
