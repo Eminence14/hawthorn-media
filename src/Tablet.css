@@ -589,6 +589,8 @@
     }
 
     .auth_container {
+        display: flex;
+        align-items: center;
         flex-direction: row;
         justify-content: space-around;
         padding: 1em 3em;
@@ -647,6 +649,10 @@
 
     .auth_container .trans-right {
         transform: translateX(35%);
+    }
+
+    .auth_container a.trans-right {
+        transform: translateX(0);
     }
 
     .auth_container>div>a {
