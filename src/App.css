@@ -36,7 +36,7 @@ body {
 }
 
 body .container {
-	min-height: 97vh;
+	min-height: 99vh;
 	background-color: var(--primary);
 
 }
