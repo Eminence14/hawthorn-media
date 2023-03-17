@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import GallPreview1 from '../assets/images/gallery_preview1.jpeg'
+import GallPreview1 from '../assets/images/Jeleela.jpeg'
 import GallPreview2 from '../assets/images/gallery_preview2.jpeg'
 import GallPreview3 from '../assets/images/gallery_preview3.png'
 import Services from '../assets/images/our_services1.jpg'
@@ -76,7 +76,7 @@ const Home = () => {
                                 <li>Photography</li>
                                 <li>Studio sessions</li>
                                 <li>Videography</li>
-                                <li>Cooperate events etc.</li>
+                                <li>Corporate events etc.</li>
                             </ul>
                             <Link to='/register'>
                                 <button>Get Started</button>

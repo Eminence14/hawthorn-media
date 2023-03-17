@@ -251,6 +251,11 @@ body {
 	padding-right: 1.8em;
 }
 
+.galleries .swiper .swiper-slide:nth-child(3) img {
+	object-position: top;
+}
+
+
 .galleries .swiper-pagination {
 	display: flex;
 	justify-content: center;
