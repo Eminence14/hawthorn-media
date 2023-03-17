@@ -36,7 +36,7 @@ body {
 }
 
 body .container {
-	max-height: 100vh;
+	min-height: 100vh;
 	background-color: var(--primary);
 
 }
@@ -771,7 +771,6 @@ footer .bottom .left {
 	background-color: var(--primary);
 	color: white;
 	padding: 0 0 50px 1em;
-	position: relative;
 }
 
 .auth_container header img {
