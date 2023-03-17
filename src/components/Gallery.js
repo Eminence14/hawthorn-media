@@ -12,6 +12,7 @@ import img4 from "../assets/images/gallery/img4.jpg";
 import img5 from "../assets/images/gallery/img5.jpg";
 import img6 from "../assets/images/gallery/img6.jpg";
 import { useLayoutEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
     useLayoutEffect(() => {
@@ -67,6 +68,7 @@ const Gallery = () => {
                         <img src={img6} alt="" />
                     </SwiperSlide>
                 </Swiper>
+                <Link to='/' className="button">Watch Our Videos</Link>
             </main>
             <Footer />
         </div>

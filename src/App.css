@@ -230,7 +230,7 @@ body {
 	z-index: 1;
 	transform: translateY(-50%);
 	background-color: rgba(245, 186, 49, 30%);
-	clip-path: polygon(100% 15%, 0% 94%, 100% 94%);
+	clip-path: polygon(100% 15%, 0% 87%, 100% 87%);
 }
 
 .home .gallery h2,
@@ -265,7 +265,7 @@ body {
 .galleries .swiper-pagination-bullet {
 	background: white;
 	position: relative;
-	top: -5px;
+	top: -30px;
 	opacity: .8;
 	width: 6px;
 	height: 6px;
@@ -690,6 +690,15 @@ section.subscribe {
 	right: 18%;
 }
 
+.main_gallery .button {
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.main_gallery footer {
+	margin-top: 2em;
+}
 
 /* GALLERY STYLES ENDS */
 
