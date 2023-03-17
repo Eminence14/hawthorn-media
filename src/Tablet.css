@@ -570,6 +570,11 @@
         right: 40%;
     }
 
+    .main_gallery .button {
+        position: relative;
+        top: -100px;
+    }
+
     /* gallery styles ends */
 
 
