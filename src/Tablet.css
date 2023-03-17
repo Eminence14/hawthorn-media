@@ -489,9 +489,9 @@
     }
 
     .ceo>div.right {
-        width: 40%;
-        font-size: 2em;
-        padding-right: 1em;
+        width: 35%;
+        font-size: 1.8em;
+        padding-right: .5em;
     }
 
     section.choose img {
