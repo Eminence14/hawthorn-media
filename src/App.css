@@ -763,12 +763,8 @@ footer .bottom .left {
 .auth_container {
 	background-color: var(--primary);
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	color: white;
-	padding-bottom: 50px;
+	padding: 0 0 50px 1em;
 	position: relative;
 }
 
@@ -784,8 +780,8 @@ footer .bottom .left {
 }
 
 .auth_container main {
-	width: 100%;
 	max-width: 500px;
+	margin: 0 auto;
 }
 
 .auth_container section span {
@@ -804,7 +800,7 @@ footer .bottom .left {
 
 .auth_container form {
 	margin-top: 20px;
-	width: 100%;
+	width: 95%;
 }
 
 .auth_container form label {
