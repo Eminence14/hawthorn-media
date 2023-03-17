@@ -764,11 +764,8 @@ footer .bottom .left {
 /*######## LOGIN AND REGISTER STYLES ########*/
 .auth_container {
 	background-color: var(--primary);
-	min-height: 97vh;
-	height: 100%;
 	color: white;
 	padding: 0 0 50px 1em;
-	position: relative;
 }
 
 .auth_container header img {
@@ -881,7 +878,7 @@ input::placeholder {
 
 .auth_container>div>a {
 	position: absolute;
-	bottom: 10px;
+	bottom: .8em;
 	white-space: nowrap;
 	color: white;
 	left: 50%;
