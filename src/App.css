@@ -36,6 +36,11 @@ body {
 	background-color: var(--primary);
 }
 
+body .container {
+	height: 95vh;
+	position: relative;
+}
+
 ::-webkit-scrollbar {
 	display: none;
 }

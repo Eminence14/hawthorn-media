@@ -22,57 +22,60 @@ const Login = () => {
     }
 
     return (
-        <div className="auth_container">
-            <div className="auth-left">
-                <header>
-                    <img src={Logo} alt="logo" />
-                </header>
-                <main>
-                    <section className="welcome">
-                        <span>Welcome</span>
-                        <span>Let’s get you signed up.</span>
-                    </section>
-                    <form onSubmit={handleSubmit}>
-                        <label htmlFor="email">
-                            Email
-                        </label>
-                        <input type="email" id="email" name='email' placeholder='Enter your email' autoComplete='off' />
-
-                        <div className='pass'>
-                            <label htmlFor="password">
-                                Password
+        <div className="container">
+            <div className="auth_container">
+                <div className="auth-left">
+                    <header>
+                        <img src={Logo} alt="logo" />
+                    </header>
+                    <main>
+                        <section className="welcome">
+                            <span>Welcome</span>
+                            <span>Let’s get you signed up.</span>
+                        </section>
+                        <form onSubmit={handleSubmit}>
+                            <label htmlFor="email">
+                                Email
                             </label>
-                            <span className="open_pass" onClick={handleClick}></span>
-                            <input
-                                type="password"
-                                id="password"
-                                name='password' placeholder='Enter your password'
-                                autoComplete='off'
-                                ref={togglePass}
-                            />
-                        </div>
+                            <input type="email" id="email" name='email' placeholder='Enter your email' autoComplete='off' />
 
-                        <div className="pass_options">
-                            <div className="remember">
-                                <label htmlFor="remember">
-                                    <input type="checkbox" name="remember" id="remember" />
-                                    <span className="custom"></span>
-                                    Remember password
+                            <div className='pass'>
+                                <label htmlFor="password">
+                                    Password
                                 </label>
+                                <span className="open_pass" onClick={handleClick}></span>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name='password' placeholder='Enter your password'
+                                    autoComplete='off'
+                                    ref={togglePass}
+                                />
                             </div>
-                            <div className="forget">
-                                Forgot password?
+
+                            <div className="pass_options">
+                                <div className="remember">
+                                    <label htmlFor="remember">
+                                        <input type="checkbox" name="remember" id="remember" />
+                                        <span className="custom"></span>
+                                        Remember password
+                                    </label>
+                                </div>
+                                <div className="forget">
+                                    Forgot password?
+                                </div>
                             </div>
-                        </div>
 
 
-                        <button className='trans-right'>Sign in</button>
-                    </form>
-                </main>
-                <Link to='/register' className='trans-right'> Don't have an account? <span> Sign up </span> </Link>
+                            <button className='trans-right'>Sign in</button>
+                        </form>
+                    </main>
+                    <Link to='/register' className='trans-right'> Don't have an account? <span> Sign up </span> </Link>
+                </div>
+                <div className="auth-right"></div>
             </div>
-            <div className="auth-right"></div>
         </div>
+
     );
 }
 
