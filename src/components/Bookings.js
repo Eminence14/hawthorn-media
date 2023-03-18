@@ -27,13 +27,6 @@ const Bookings = () => {
 
                         <tr>
                             <td>123456</td>
-                            <td>$1287</td>
-                            <td>transfer</td>
-                            <td>completed</td>
-                            <td>02:37pm meeting one</td>
-                        </tr>
-                        <tr>
-                            <td>123456</td>
                             <td>$224</td>
                             <td>cash</td>
                             <td>pending</td>

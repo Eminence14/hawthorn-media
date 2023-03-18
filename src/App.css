@@ -1181,7 +1181,7 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 
 .booking {
 	background-color: var(--light-gray);
-	min-height: 80vh;
+	min-height: 75vh;
 	padding: 5em 1em;
 	text-align: center;
 }
@@ -1310,7 +1310,51 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 
 
 
+/* SERVICE STYLES BEGINS  */
 
+.main-services {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	text-align: center;
+	padding: 4em .5em 1.5em;
+	min-height: 75vh;
+}
+
+.main-services * {
+	color: var(--primary);
+}
+
+.main-services h1 {
+	font-size: 1.5rem;
+}
+
+.main-services p {
+	font-size: 1.1rem;
+}
+
+.main-services .service-cards {
+	margin-top: 3em;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2em;
+	padding: 0 1em;
+}
+
+.main-services .service-card {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	justify-content: center;
+	align-items: center;
+	padding: 2em 0;
+	border-radius: 10px;
+	background: linear-gradient(145deg, #ffffff, #efefef);
+	box-shadow: 20px 20px 60px #c9c9c9,
+		-20px -20px 60px #ffffff;
+}
+
+/* SERVICE STYLES ENDS  */
 
 
 
