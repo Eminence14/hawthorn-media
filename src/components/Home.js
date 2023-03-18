@@ -67,7 +67,7 @@ const Home = () => {
                     <h2>Our Services</h2>
                     <div>
                         <picture>
-                            <source media="(min-width: 768px)" srcset={Services1} />
+                            <source media="(min-width: 768px)" srcSet={Services1} />
                             <img src={Services} alt="" />
                         </picture>
                         <div>

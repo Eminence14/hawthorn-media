@@ -1,4 +1,5 @@
 import { useLayoutEffect } from "react"
+import { Link } from "react-router-dom"
 import AccNavbar from "./AccNavbar"
 import Footer from "./Footer"
 
@@ -9,7 +10,11 @@ const Services = () => {
     return (
         <div className="tablet">
             <AccNavbar />
-            <div className="services" style={{ padding: '5em 2em', backgroundColor: '#0001' }}>
+            <div className="services">
+                <Link to='/services/videography'>Videography</Link>
+                <Link to='/services/photography'>Photography</Link>
+                <Link to='/services/studio'>Studio sessions</Link>
+                <Link to='/services/corporate'>Corporate Events</Link>
             </div>
             <Footer />
         </div>

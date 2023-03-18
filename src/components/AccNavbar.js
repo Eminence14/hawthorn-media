@@ -47,7 +47,7 @@ const AccNavbar = () => {
                         <img src={BookImg} alt="" />
                         <span className='nav-titles'>Your bookings</span>
                     </NavLink>
-                    <NavLink to='/service'
+                    <NavLink to='/services'
                         style={({ isActive }) => ({ backgroundColor: isActive ? "#f5ba31" : "" })}>
                         <img src={ServiceImg} alt="" />
                         <span className='nav-titles'>Services</span>
