@@ -1361,4 +1361,20 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 
 
 
+/* SUB SERVICES STYLES BEGINS */
+
+.sub-services {
+	min-height: 75vh;
+}
+
+
+
+
+
+/* SUB SERVICES STYLES ENDS */
+
+
+
+
+
 /* ACCOUNT PAGES STYLES ENDS */
