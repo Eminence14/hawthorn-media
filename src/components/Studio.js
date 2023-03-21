@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import AccNavbar from "./AccNavbar"
 import Footer from "./Footer"
 
@@ -44,7 +45,7 @@ const Studio = () => {
                                         </select>
                                     </section>
 
-                                    <button className="button">Book Now</button>
+                                    <Link className="button" to='/detail'>Book Now</Link>
                                 </div>
                             ))
                         }

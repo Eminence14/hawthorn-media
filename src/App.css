@@ -1437,6 +1437,14 @@ header.details-header {
 	margin-bottom: .6em;
 }
 
+.subservice-card a.button {
+	display: block;
+	width: fit-content;
+	padding: 1em 1.3em;
+	margin-top: 1em;
+	white-space: nowrap;
+}
+
 .subservice-card button.button {
 	padding: 1em 1.3em;
 	margin-top: 1em;
@@ -1445,8 +1453,10 @@ header.details-header {
 .package-body select {
 	border: 1px solid var(--primary);
 	width: 100%;
-	padding: 1em 0.5em;
+	padding: .7em 0.5em;
 }
+
+
 
 .details-container {
 	min-height: 75vh;
@@ -1497,8 +1507,8 @@ header.details-header {
 
 /* PHOTOGRAPHY POP UP */
 .photo-modal {
-	height: 100svh;
-	width: 100svw;
+	height: 100vh;
+	width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
