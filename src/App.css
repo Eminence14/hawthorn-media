@@ -25,6 +25,19 @@ a {
 	cursor: pointer;
 }
 
+/* disable arrows in number inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
 @font-face {
 	font-family: ProductSans;
 	src: url("./assets/fonts/ProductSans.ttf");
@@ -1375,7 +1388,8 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 	box-shadow: border-box;
 }
 
-.sub-services>div>header {
+.sub-services>div>header,
+header.details-header {
 	text-align: center;
 	padding: 5em 0 3em;
 }
@@ -1427,6 +1441,54 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 	margin-top: 1em;
 }
 
+.package-body select {
+	border: 1px solid var(--primary);
+	width: 100%;
+	padding: 1em 0.5em;
+}
+
+.details-container {
+	min-height: 75vh;
+	background-color: var(--light-gray);
+	padding: 0 0 3em;
+}
+
+.details-body {
+	padding: 0 1.2em;
+}
+
+.details-body form {
+	background-color: white;
+	padding: 2em 1.5em;
+	border-radius: 10px;
+}
+
+.details-body form label {
+	font-size: 1.05em;
+	font-weight: 700;
+}
+
+.details-body form input {
+	padding: .7em;
+	display: block;
+	border: 1px solid var(--deep-gray);
+	width: 100%;
+	margin: 0.5em auto 1em;
+	border-radius: 10px;
+	font-size: 1.1em;
+}
+
+.details-body form button {
+	margin: 0 auto;
+	display: block;
+	font-weight: 100;
+}
+
+.details-body form button:disabled {
+	opacity: .3;
+	color: black;
+	background-color: var(--deep-gray);
+}
 
 /* resetting the radio buttons starts */
 

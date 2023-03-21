@@ -17,6 +17,7 @@ import Videography from './components/Videography';
 import Photography from './components/Photography';
 import Studio from './components/Studio';
 import Corporate from './components/Corporate';
+import Detail from './components/Detail';
 
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
           <Route path='corporate' element={<Corporate />} />
         </Route>
         <Route path='/profile' element={<Profile />} />
+        <Route path='/detail' element={<Detail />} />
+
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>

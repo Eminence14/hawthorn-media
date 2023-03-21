@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router-dom"
 
 const SubServiceTemp = ({ title, packages }) => {
+    const navigate = useNavigate()
+
+
     return (
         <div className="subservice-template">
             <header>
@@ -34,7 +38,9 @@ const SubServiceTemp = ({ title, packages }) => {
                                 }
                             </section>
 
-                            <button className="button">Book Now</button>
+                            <button className="button" onClick={() => {
+                                { title === 'Videography' ? navigate('/detail') : navigate('/') }
+                            }}>Book Now</button>
                         </div>
                     ))
                 }
