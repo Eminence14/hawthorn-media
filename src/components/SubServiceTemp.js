@@ -12,6 +12,7 @@ const SubServiceTemp = ({ title, packages }) => {
                         <div className="subservice-card" key={id}>
                             <header>
                                 <h1 className="package-title">{pack.title}</h1>
+                                {pack.preDescription && <h4>{pack.preDescription}</h4>}
                                 <p className="package-description">{pack.description}</p>
                             </header>
 
