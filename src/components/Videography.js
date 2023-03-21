@@ -2,8 +2,10 @@ import { useState } from "react"
 import AccNavbar from "./AccNavbar"
 import Footer from "./Footer"
 import SubServiceTemp from "./SubServiceTemp"
+import { useNavigate } from "react-router-dom"
 
 const Videography = () => {
+    const navigate = useNavigate()
     const [packages, setPackages] = useState([
         {
             title: 'Classic Wedding Package',
@@ -59,11 +61,15 @@ const Videography = () => {
             ]
         },
     ])
+
+    const bookNow = () => {
+        navigate('/detail')
+    }
     return (
         <div className="tablet">
             <AccNavbar />
             <div className="sub-services">
-                <SubServiceTemp title='Videography' packages={packages} />
+                <SubServiceTemp title='Videography' packages={packages} bookNow={bookNow} />
             </div>
             <Footer />
         </div>

@@ -1,7 +1,5 @@
-import { useNavigate } from "react-router-dom"
+const SubServiceTemp = ({ title, packages, bookNow }) => {
 
-const SubServiceTemp = ({ title, packages }) => {
-    const navigate = useNavigate()
 
 
     return (
@@ -30,7 +28,8 @@ const SubServiceTemp = ({ title, packages }) => {
                                 <h2>Please select duration.</h2>
                                 {
                                     pack.packageDuration.map((dur, id) => (
-                                        <label className="duration-options" htmlFor={dur}>{dur}
+                                        <label className="duration-options" key={id} htmlFor={dur}>{dur}
+
                                             <input type='radio' name="duration" id={dur} key={id} />
                                             <span className="checkmark"></span>
                                         </label>
@@ -38,9 +37,7 @@ const SubServiceTemp = ({ title, packages }) => {
                                 }
                             </section>
 
-                            <button className="button" onClick={() => {
-                                { title === 'Videography' ? navigate('/detail') : navigate('/') }
-                            }}>Book Now</button>
+                            <button className="button" onClick={bookNow}>Book Now</button>
                         </div>
                     ))
                 }

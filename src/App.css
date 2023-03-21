@@ -1427,7 +1427,8 @@ header.details-header {
 	margin-bottom: .7em;
 }
 
-.subservice-card .packageDetail span {
+.subservice-card .packageDetail span,
+.pop-data span {
 	display: inline-block;
 	margin-right: .5em;
 }
@@ -1489,6 +1490,78 @@ header.details-header {
 	color: black;
 	background-color: var(--deep-gray);
 }
+
+
+
+
+
+/* PHOTOGRAPHY POP UP */
+.photo-modal {
+	height: 100svh;
+	width: 100svw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: .5em;
+	transform: scale(0);
+	transform-origin: top left;
+	transition: all 200ms;
+}
+
+.photo-modal.active {
+	transform: scale(1);
+}
+
+#photo-overlay {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	pointer-events: all;
+}
+
+.photo-modal-content {
+	position: relative;
+	z-index: 5;
+	padding: 2em 1em 1.5em 1em;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.photo-modal-content h2 {
+	font-size: 1.2rem;
+	color: #EB1717;
+	margin-bottom: .7em;
+}
+
+.photo-modal-content .pop-data {
+	margin-bottom: .5em;
+	line-height: 1.4em;
+}
+
+.photo-modal-content .footer {
+	margin-top: 1em;
+}
+
+.photo-modal-content .footer a {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1em 0;
+	border-radius: 10px;
+	color: var(--primary);
+	font-weight: 700;
+	font-size: 1.1em;
+	margin: 1.5em 0 .3em 0;
+	background-color: var(--secondary);
+}
+
 
 /* resetting the radio buttons starts */
 
@@ -1561,6 +1634,10 @@ header.details-header {
 /* resetting the radio buttons ends */
 
 /* SUB SERVICES STYLES ENDS */
+
+
+
+
 
 
 
