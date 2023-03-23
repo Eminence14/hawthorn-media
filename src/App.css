@@ -830,6 +830,10 @@ footer .bottom .left {
 	bottom: 2px;
 }
 
+.auth_container form label[for='remember']::after {
+	content: '';
+}
+
 .auth_container form input {
 	background-color: white;
 	padding: 1em;
@@ -887,7 +891,6 @@ input::placeholder {
 }
 
 .auth_container .auth-left {
-	/* position: relative; */
 	padding-bottom: 2.5em;
 }
 
@@ -962,6 +965,7 @@ label[for="remember"] {
 	margin: 0;
 	gap: .3em;
 }
+
 
 /* Styling the check button */
 input[type="checkbox"] {
