@@ -947,12 +947,8 @@ input::placeholder {
 }
 
 .remember input#remember {
-	margin: 0 0.3em 0 0;
 	width: fit-content;
-}
-
-.auth_container form .remember label::after {
-	content: "";
+	margin: 0;
 }
 
 .forget {
@@ -961,8 +957,10 @@ input::placeholder {
 
 label[for="remember"] {
 	display: flex;
-	justify-content: start;
+	justify-content: flex-start;
 	align-items: center;
+	margin: 0;
+	gap: .3em;
 }
 
 /* Styling the check button */
