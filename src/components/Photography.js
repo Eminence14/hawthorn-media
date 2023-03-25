@@ -61,11 +61,11 @@ const Photography = () => {
             <AccNavbar />
             <div className="sub-services">
                 <SubServiceTemp title='Photography' packages={packages} bookNow={bookNow} />
-                <div className="photo-modal" ref={photoModal} >
-                    <div id="photo-overlay" onClick={() => {
+                <div className="modal" ref={photoModal} >
+                    <div id="modal-overlay" onClick={() => {
                         photoModal.current.classList.remove('active')
                     }}></div>
-                    <div className="photo-modal-content">
+                    <div className="modal-content">
                         <h2>Please note:</h2>
                         {
                             popData.map((data, ind) => (

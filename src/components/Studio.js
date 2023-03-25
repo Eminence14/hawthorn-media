@@ -1,10 +1,14 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import AccNavbar from "./AccNavbar"
 import Footer from "./Footer"
 
 const Studio = () => {
-    const title = 'Studio sessions'
+    const studioModal = useRef();
+    const title = 'Studio sessions';
+    const bookNow = () => {
+        studioModal.current.classList.add('active')
+    }
     const [packages, setPackages] = useState([
         {
             title: 'Fashion Photography',
@@ -45,10 +49,21 @@ const Studio = () => {
                                         </select>
                                     </section>
 
-                                    <Link className="button" to='/detail'>Book Now</Link>
+                                    <button className="button" onClick={bookNow}>Book Now</button>
                                 </div>
                             ))
                         }
+                    </div>
+                </div>
+                <div className="modal" ref={studioModal} >
+                    <div id="modal-overlay" onClick={() => {
+                        studioModal.current.classList.remove('active')
+                    }}></div>
+                    <div className="modal-content">
+                        <p>
+                            Furthermore all makeup and set design prices are not included in the photography cost but we have secured discount with make up artist like bookie lavida, Jide of st. Ola, Ronald 07th and LBV makeovers.
+                        </p>
+                        <Link to='/detail'>Continue</Link>
                     </div>
                 </div>
             </div>
