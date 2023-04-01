@@ -1006,6 +1006,62 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 	display: block;
 }
 
+
+/* Password modal */
+.password-modal {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 0 .5em;
+	transform: scale(0);
+	transform-origin: top right;
+	transition: all 200ms;
+	color: var(--primary);
+	text-align: center;
+}
+
+.password-modal.active {
+	transform: scale(1);
+}
+
+.password-modal-content {
+	z-index: 5;
+	background-color: white;
+	padding: 1.5em 2em;
+	border-radius: 10px;
+}
+
+.password-modal-content h1 {
+	margin: .3em;
+}
+
+.password-modal-content input {
+	border-radius: 10px;
+	border: 1px solid var(--light-gray);
+	font-size: 1.3rem;
+	padding: .6em;
+	margin: 2em 0 1em 0;
+	width: 100%;
+}
+
+.password-modal-content input::placeholder {
+	font-weight: 400;
+}
+
+.password-modal-content a {
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+
+
 /*######## Login and Register Styles ended ########*/
 
 

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../assets/images/Hawthorn Studios Yellow.png';
 
@@ -6,7 +6,11 @@ import Logo from '../assets/images/Hawthorn Studios Yellow.png';
 const Login = () => {
 
     const togglePass = useRef()
+    const passwordModal = useRef()
     const navigate = useNavigate();
+    const [passwordEmail, setPasswordEmail] = useState('')
+
+
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -60,7 +64,7 @@ const Login = () => {
                                     Remember password
                                 </label>
                             </div>
-                            <div className="forget">
+                            <div className="forget" onClick={() => passwordModal.current.classList.add('active')}>
                                 Forgot password?
                             </div>
                         </div>
@@ -72,6 +76,15 @@ const Login = () => {
                 <Link to='/register' className='trans-right'> Don't have an account? <span> Sign up </span> </Link>
             </div>
             <div className="auth-right"></div>
+            <div className="password-modal" ref={passwordModal} >
+                <div id="modal-overlay" onClick={() => passwordModal.current.classList.remove('active')}></div>
+                <div className="password-modal-content">
+                    <h1>Forgot your password?</h1>
+                    <span>You’’ll will get an email with a reset link</span>
+                    <input type="email" value={passwordEmail} name="password-email" onChange={(e) => setPasswordEmail(e.target.value)} placeholder='your-email@example.com' />
+                    <Link to='/' className='button'>Request password</Link>
+                </div>
+            </div>
         </div>
 
     );
