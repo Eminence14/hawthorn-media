@@ -2,6 +2,7 @@ import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import AccNavbar from "./AccNavbar"
 import Footer from "./Footer"
+import dropArrow from "../assets/images/dropdown-arrow.svg"
 
 const Studio = () => {
     const studioModal = useRef();
@@ -13,7 +14,10 @@ const Studio = () => {
         {
             title: 'Fashion Photography',
             getting: [
-                'lorem', 'ipsum', 'donor'
+                `10 profesionally edited pictures (1 outfit)
+                
+                Price-N100,000`,
+                'ipsum', 'donor'
             ]
         },
         {
@@ -21,8 +25,27 @@ const Studio = () => {
             getting: [
                 'lorem', 'ipsum', 'donor'
             ]
+        },
+        {
+            title: 'Birthday shoots',
+            getting: [
+                'lorem lorem', 'ipsum ipsum', 'donor donor'
+            ]
         }
     ])
+    function handleClick(e) {
+        // remove the active class from all dropdown elements
+        // const allDropDowns = Array.from(document.querySelectorAll('.dropdown-body'))
+        // allDropDowns.forEach(dropDown => dropDown.classList.remove('active'))
+
+        // add active class to clicked element
+        e.target.parentElement.children[1].classList.toggle('active')
+
+    }
+
+
+
+
     return (
         <div className="tablet">
             <AccNavbar />
@@ -41,12 +64,23 @@ const Studio = () => {
                                     </header>
                                     <section className="package-body">
                                         <h2>What you get:</h2>
-                                        <select>
-                                            <option value="" disabled selected hidden>Choose Package</option>
-                                            {pack.getting.map((gett, id) => (
-                                                <option value={gett} key={id}>{gett}</option>
-                                            ))}
-                                        </select>
+
+                                        <div className="dropdown-container">
+                                            <div className="dropdown" onClick={handleClick}>
+                                                <div className="dropdown-head">
+                                                    Choose package
+                                                    <img src={dropArrow} alt="" />
+                                                </div>
+                                                <div className="dropdown-body">
+                                                    {
+                                                        pack.getting.map((option, key) => (
+                                                            <div key={key}>
+                                                            </div>
+                                                        ))
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
                                     </section>
 
                                     <button className="button" onClick={bookNow}>Book Now</button>

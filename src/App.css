@@ -1659,6 +1659,28 @@ header.details-header {
 
 
 
+/* STUDIO STYLES BEGINS */
+
+/* DROPDOWN */
+.dropdown-head {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-body {
+	display: none;
+}
+
+.dropdown-body.active {
+	display: block;
+}
+
+/* STUDIO STYLES ENDS */
+
+
 
 
 
