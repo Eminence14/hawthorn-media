@@ -38,7 +38,7 @@ const Clients = () => {
                 </header>
                 <main>
                     <p className="client-body">
-                        At Hawthorn Media, Our clients are the most important entities ,we believe in delivering excellent services that cater for our customers need,here by giving them satisfaction and value for their money and we're proud to have had the opportunity to work with such a distinguished roster of clients, providing value,excellence and luxury,this has helped usto  develop good relationship with our esteemed customers  and we look forward to serving them better and also ensure that the continuity of our excellent service delivery remains our focus.
+                        At Hawthorn Media, Our clients are the most important entities, we believe in delivering excellent services that cater for our customers need, here by giving them satisfaction and value for their money and we're proud to have had the opportunity to work with such a distinguished roster of clients, providing value, excellence and luxury, this has helped us to  develop good relationship with our esteemed customers and we look forward to serving them better and also ensure that the continuity of our excellent service delivery remains our focus.
                     </p>
                     <div className="clients-img">
                         <img src={SignatureBankImg} alt="" />
