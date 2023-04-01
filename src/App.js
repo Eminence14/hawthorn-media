@@ -18,6 +18,7 @@ import Photography from './components/Photography';
 import Studio from './components/Studio';
 import Corporate from './components/Corporate';
 import Detail from './components/Detail';
+import Clients from './components/Clients';
 
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
         </Route>
         <Route path='/profile' element={<Profile />} />
         <Route path='/detail' element={<Detail />} />
+        <Route path='/clients' element={<Clients />} />
+
 
         <Route path='*' element={<NotFound />} />
       </Routes>

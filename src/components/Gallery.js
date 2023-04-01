@@ -68,7 +68,7 @@ const Gallery = () => {
                         <img src={img6} alt="" />
                     </SwiperSlide>
                 </Swiper>
-                <Link to='/' className="button">Watch Our Videos</Link>
+                <Link to='https://www.youtube.com/c/HawthornMedia01' target='_blank' className="button">Watch Our Videos</Link>
             </main>
             <Footer />
         </div>

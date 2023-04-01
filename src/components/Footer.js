@@ -5,6 +5,7 @@ import Twitter from '../assets/images/twitter.svg';
 
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear()
     return (
         <footer>
             <section className="top">
@@ -12,6 +13,7 @@ const Footer = () => {
                 <Link to="/about">About Us</Link>
                 <Link to="/contact">Contact Us</Link>
                 <Link to="/gallery">Gallery</Link>
+                <Link to="/clients">Our Clients</Link>
             </section>
             <hr />
             <section className="bottom">
@@ -21,11 +23,11 @@ const Footer = () => {
                     <img src={Twitter} alt="" />
                 </div>
                 <div className="right">
-                    Copyright &copy; Hawthorn Media 2023 All right reserved.
+                    Copyright &copy; Hawthorn Media {currentYear} All right reserved.
                 </div>
             </section>
         </footer>
     );
 }
- 
+
 export default Footer;
