@@ -71,7 +71,7 @@ const Studio = () => {
                                                     Choose package
                                                     <img src={dropArrow} alt="" />
                                                 </div>
-                                                <div className="dropdown-body active">
+                                                <div className="dropdown-body">
                                                     {
                                                         pack.getting.map((option, key) => (
                                                             <div key={key}>
