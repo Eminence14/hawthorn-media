@@ -1042,6 +1042,7 @@ input::placeholder {
 .remember *,
 .pass_options .forget {
 	cursor: pointer;
+	white-space: nowrap;
 }
 
 .forget {
