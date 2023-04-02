@@ -13,7 +13,6 @@ const Footer = () => {
                 <Link to="/about">About Us</Link>
                 <Link to="/contact">Contact Us</Link>
                 <Link to="/gallery">Gallery</Link>
-                <Link to="/clients">Our Clients</Link>
             </section>
             <hr />
             <section className="bottom">
