@@ -248,7 +248,8 @@ body {
 }
 
 .home .gallery h2,
-.home .services h2 {
+.home .services h2,
+.home .testimonial h2 {
 	color: var(--secondary);
 	font-size: 1.5em;
 	font-weight: 700;
@@ -470,6 +471,39 @@ img.faq-drop-arrow.active {
 }
 
 /* faqs */
+
+
+
+/* testimonials */
+.testimonials .swiper {
+	height: 260px;
+	width: 100%;
+	max-width: 450px;
+	margin: 0 auto;
+	padding-left: 1.8em;
+	padding-right: 1.8em;
+}
+
+.testimonials .swiper-slide {
+	background-color: var(--secondary);
+	padding: 1.5em 1em;
+	border-radius: 10px;
+	color: var(--primary);
+	height: 210px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1em;
+}
+
+.testimonials .swiper-slide h3 {
+	font-size: 1.3em;
+}
+
+.testimonials .swiper-pagination {
+	display: none;
+}
+
 
 
 section.choose {

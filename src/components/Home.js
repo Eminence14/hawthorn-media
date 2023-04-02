@@ -45,7 +45,7 @@ const Home = () => {
             answer: 'Unfortunately not. Due to copyright licensing, we do not allow our clients to choose the music for the video. You are hiring us to create a creative narrative film that represents your wedding day after all. Our choice in music plays an integral role in your film, it allows us to set a particular pace and mood for your film.'
         },
         {
-            title: 'WE WOULD LIKE TO USE YOUR SERVICES BUT THE PRICESEEMS EXPENSIVE,WHY?',
+            title: 'WE WOULD LIKE TO USE YOUR SERVICES BUT THE PRICE SEEMS EXPENSIVE, WHY?',
             answer: 'That question pretty needs its own article, but keep in mind the hours and cost involved with Administration, enquiries, marketing, gear (cameras, tripods ,audio recording equipment, lighting and a bunch of special tools to help us get some epic shots), gear maintenance, transport, meeting with clients, organising schedules, preparation (charging battries, cleaning lenses, clearing cards) filming, editing( downloading footage, watching through, cutting down, choosing music, story telling, color grading, touching up, exporting, uploading) keep in mind that typically 30-40 hours will go into editing your wedding film! Wedding videography is a huge detailes and time consuming process. If we didnt charge what we did the product will suffer.'
         },
         {
@@ -61,6 +61,28 @@ const Home = () => {
             answer: 'Yes. It is standard practice for professional wedding videography companies to ask clients to sign contracts. This is to protect both parties and clarify exactly what is expected from the clients and what Hawthorn will provide. The contract allows us to be well prepared so that every wedding film is produced smoothly and professionally as possible. Feel free to contact us and we’ll send you a copy of our terms and conditions.'
         },
     ];
+    const testimonials = [
+        {
+            name: 'Salaha Sani',
+            description: 'Hawthorn Studios is a top-notch media company specializing in videography and photography services. From the moment I stepped into their studio, I knew I was in the hands of professionals. The team was friendly, welcoming, and incredibly talented.'
+        },
+        {
+            name: 'Agbo Evelyn-oka',
+            description: 'Their videography and photography skills are unparalleled. They use state-of-the-art equipment and cutting-edge techniques to create stunning visuals that truly capture the essence of the moment. Whether it\'s a wedding, a corporate event, or a personal photoshoot, they have a keen eye for detail and an exceptional ability to capture the perfect shot.'
+        },
+        {
+            name: 'Samuel Ajayi',
+            description: 'Their editing skills are equally impressive. They know just how to enhance the footage and photos to create a cohesive and captivating final product. Their attention to detail is evident in every aspect of their work, from the color grading to the sound design.'
+        },
+        {
+            name: 'Eze Jude',
+            description: 'I was blown away by their creativity and professionalism throughout the entire process. They truly went above and beyond to ensure that I was happy with the end result. They are passionate about their work and it shows in every aspect of their service.'
+        },
+        {
+            name: 'Leah Obadiah',
+            description: 'Overall, I would highly recommend Hawthorn Studios to anyone looking for high-quality videography and photography services. They are truly the best in the business, and I am grateful for the exceptional work they did for me.'
+        },
+    ]
     return (
         <>
             <Navbar />
@@ -142,6 +164,36 @@ const Home = () => {
                 <section className="faqs">
                     <div className="head">Frequently Asked Questions</div>
                     <FAQ questions={questions} />
+                </section>
+                <section className="testimonial">
+                    <h2>Testimonials</h2>
+                    <div className="testimonials">
+                        <Swiper
+                            modules={[Pagination]}
+                            spaceBetween={45}
+                            slidesPerView={1.15}
+                            pagination={{ clickable: true }}
+                            breakpoints={{
+                                768: {
+                                    width: 768,
+                                    slidesPerView: 2,
+                                },
+                                1200: {
+                                    width: 1200,
+                                    slidesPerView: 3,
+                                },
+                            }}
+                        >
+                            {
+                                testimonials.map((testimonial, index) => (
+                                    <SwiperSlide key={index}>
+                                        <p className="testimonial-description">{testimonial.description}</p>
+                                        <h3 className="testimonial-name">{testimonial.name}</h3>
+                                    </SwiperSlide>
+                                ))
+                            }
+                        </Swiper>
+                    </div>
                 </section>
                 <section className="choose">
                     <h1>Why Choose Us?</h1>

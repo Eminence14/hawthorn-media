@@ -98,10 +98,25 @@
         max-width: 350px;
     }
 
+    section.faqs {
+        margin-left: 6em;
+        margin-right: 6em;
+    }
+
     .galleries .swiper {
         width: 90%;
         max-width: 700px;
         height: 380px;
+    }
+
+    .testimonials .swiper {
+        width: 90%;
+        max-width: 755px;
+        height: 350px;
+    }
+
+    .testimonials .swiper-slide {
+        height: 250px;
     }
 
     .galleries img {
@@ -445,6 +460,11 @@
         line-height: 60px;
     }
 
+    section.faqs {
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+
     .gallery a {
         padding: .8em;
         font-size: .9em;
@@ -456,6 +476,16 @@
         width: 95%;
         max-width: 1150px;
         height: 470px;
+    }
+
+    .testimonials .swiper {
+        width: 95%;
+        max-width: 1190px;
+        height: 470px;
+    }
+
+    .testimonials .swiper-slide {
+        height: 360px;
     }
 
     .galleries img {
