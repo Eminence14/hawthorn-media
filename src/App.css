@@ -949,21 +949,15 @@ input::placeholder {
 	cursor: pointer;
 }
 
-.remember input#remember {
-	width: fit-content;
-	margin: 0;
-}
-
 .forget {
 	color: var(--secondary);
 }
 
 label[for="remember"] {
-	display: flex;
-	justify-content: flex-start;
+	display: grid;
+	grid-template-columns: 10% 90%;
 	align-items: center;
-	margin: 0;
-	gap: .3em;
+	gap: .4em;
 }
 
 
@@ -974,13 +968,13 @@ input[type="checkbox"] {
 
 label[for="remember"] span.custom {
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	transform: translateY(-50%);
 	left: 0;
 	height: 12px;
 	width: 12px;
 	background-color: white;
-	z-index: 1;
+	z-index: 0;
 }
 
 label[for="remember"] input[type="checkbox"]:checked~span.custom {
@@ -1031,6 +1025,7 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 }
 
 .password-modal-content {
+	position: relative;
 	z-index: 5;
 	background-color: white;
 	padding: 1.5em 2em;
@@ -1046,12 +1041,13 @@ label[for="remember"] input[type="checkbox"]:checked~span.custom::after {
 	border: 1px solid var(--light-gray);
 	font-size: 1.3rem;
 	padding: .6em;
-	margin: 2em 0 1em 0;
+	margin: 1.3em 0 1em 0;
 	width: 100%;
 }
 
 .password-modal-content input::placeholder {
 	font-weight: 400;
+	color: var(--deep-gray);
 }
 
 .password-modal-content a {

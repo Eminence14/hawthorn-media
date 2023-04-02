@@ -61,7 +61,7 @@ const Login = () => {
                                 <label htmlFor="remember">
                                     <input type="checkbox" name="remember" id="remember" />
                                     <span className="custom"></span>
-                                    Remember password
+                                    <span>Remember password</span>
                                 </label>
                             </div>
                             <div className="forget" onClick={() => passwordModal.current.classList.add('active')}>
