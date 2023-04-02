@@ -13,11 +13,54 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { useLayoutEffect } from "react";
 import Logo from '../assets/images/Hawthorn Studios Yellow.png';
+import FAQ from "./Faqs";
 
 const Home = () => {
     useLayoutEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    const questions = [
+        {
+            title: 'WILL THE FILMING GET IN THE WAY OF THE WEDDING?',
+            answer: 'We will try to be as discreet as possible and hopefully, you will forget we are even there, in some some cases, we may provide a small amount of direction during the course of your day, we do ask for a small amount of time alone with the bride and groom after the ceremony if time permits, but mostly the nature of our films means we want you to behave naturally so we can blend ino the  background and capture those special moments when you least expect it.'
+        },
+        {
+            title: 'DO YOU CHARGE A DEPOSIT FOR MAKING A BOOKING?',
+            answer: 'Yes to secure your booking for our services and save the date, we ask for a non-refundable deposit for all of our wedding film & photo collections. The deposit is paid when the contract is signed, with the remaining balance to be paid 8weeks prior to your big day.'
+        },
+        {
+            title: 'CAN WE CANCEL AT ANY TIME?',
+            answer: 'Cancellation must be made in writing and we will retain N0.00 booking fee unless we find a replacement booking for your date. If you cancel 12 weeks before your wedding, the full payment is due, we strongly recommend you take out wedding insurance to cover any loss you could incur for cancelling or postponing your wedding due to unforseen circumstances. If you have any other question feel free to contact us by checking our contact page and we will get back to you as soon as possible'
+        },
+        {
+            title: 'HOW WILL THE WEDDING CINEMATOGRAPHERS BE DRESSED?',
+            answer: 'We dress as smart as standard to assure we blend in with your wedding guests so that our presence is as non-intrusive as possible.'
+        },
+        {
+            title: 'HOW LONG UNTIL I RECIEVE MY WEDDING VIDEO?',
+            answer: 'All our films are different and take different amounts of time to produce. We would only deliver a wedding video if we are 100% happy with it, which takes around 14-28 days (stated in the contract), but in most cases can be much sooner.'
+        },
+        {
+            title: 'CAN I CHOOSE THE MUSIC FOR MY WEDDING FILM?',
+            answer: 'Unfortunately not. Due to copyright licensing, we do not allow our clients to choose the music for the video. You are hiring us to create a creative narrative film that represents your wedding day after all. Our choice in music plays an integral role in your film, it allows us to set a particular pace and mood for your film.'
+        },
+        {
+            title: 'WE WOULD LIKE TO USE YOUR SERVICES BUT THE PRICESEEMS EXPENSIVE,WHY?',
+            answer: 'That question pretty needs its own article, but keep in mind the hours and cost involved with Administration, enquiries, marketing, gear (cameras, tripods ,audio recording equipment, lighting and a bunch of special tools to help us get some epic shots), gear maintenance, transport, meeting with clients, organising schedules, preparation (charging battries, cleaning lenses, clearing cards) filming, editing( downloading footage, watching through, cutting down, choosing music, story telling, color grading, touching up, exporting, uploading) keep in mind that typically 30-40 hours will go into editing your wedding film! Wedding videography is a huge detailes and time consuming process. If we didnt charge what we did the product will suffer.'
+        },
+        {
+            title: 'CAN WE MEET BEFORE HAND TO DISCUSS DETAILS?',
+            answer: 'We would absolutely love to meet all of our couples before their big day, but we know this isn’t always possible. So we usually recommend a phone or Skype call. We want to make sure we answer any questions you are curious about, that you are fully confident in our ability to make your wedding film and photos as special as they can be and more importantly, so we can find out a little bit about yourselves. We don’t want to be a stranger to you, we want to assure you are as comfortable as can be around us, after all, we will be a part of your special day!'
+        },
+        {
+            title: 'WHY ARE YOUR WEDDING FILM SHORT IN LENGHT WHEN YOU WILL BE IN OUR WEDDING FOR 10 HOURS?',
+            answer: 'Our main goal as wedding cinematographers is to make you a wedding film that everyone can watch and find engaging and entertaining. The days of the long-form wedding videography that last 2-3 hours are over. Very, very few people want to sit down and watch something that drags out for that long. Young stylish new couples want their wedding film to share similarities and conventions that are commonly seen in movies. We primarily shoot for your highlight wedding film’, as well as including your full ceremony, speeches, first dance.'
+        },
+        {
+            title: 'DO YOU USE CONTRACTS?',
+            answer: 'Yes. It is standard practice for professional wedding videography companies to ask clients to sign contracts. This is to protect both parties and clarify exactly what is expected from the clients and what Hawthorn will provide. The contract allows us to be well prepared so that every wedding film is produced smoothly and professionally as possible. Feel free to contact us and we’ll send you a copy of our terms and conditions.'
+        },
+    ];
     return (
         <>
             <Navbar />
@@ -95,6 +138,10 @@ const Home = () => {
                         <h5>MR SAM HAWTHORN ULOKO</h5>
                         <h6>Chief Executive Officer</h6>
                     </div>
+                </section>
+                <section className="faqs">
+                    <div className="head">Frequently Asked Questions</div>
+                    <FAQ questions={questions} />
                 </section>
                 <section className="choose">
                     <h1>Why Choose Us?</h1>
