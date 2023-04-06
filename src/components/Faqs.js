@@ -16,12 +16,7 @@ const FAQ = ({ questions }) => {
             <div key={index} className="question">
                 <div className="question-header" onClick={() => handleClick(index)}>
                     <h3>{question.title}</h3>
-                    {
-                        !isActive ?
-                            <img src={dropArrow} alt='drop arrow' className='faq-drop-arrow' />
-                            :
-                            <img src={dropArrow} alt='drop arrow' className='faq-drop-arrow active' />
-                    }
+                    <img src={dropArrow} alt='drop arrow' className={`faq-drop-arrow ${!isActive ? '' : 'active'}`} />
                 </div>
                 <div className={`question-content ${isActive ? 'active' : ''}`}>
                     <p>{question.answer}</p>

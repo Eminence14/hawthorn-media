@@ -445,7 +445,13 @@ section.faqs {
 	word-spacing: .3em;
 }
 
-img.faq-drop-arrow.active {
+img.faq-drop-arrow,
+img.drop-arrow {
+	transition: 200ms all;
+}
+
+img.faq-drop-arrow.active,
+img.drop-arrow.active {
 	transform: rotateZ(180deg);
 }
 
@@ -1820,11 +1826,34 @@ header.details-header {
 
 .dropdown-body {
 	display: none;
+	margin: 1.5em 0;
+	background-color: rgba(0, 0, 0, 0.05);
+	padding: 1em;
+	flex-direction: column;
+	gap: 1em;
+	font-weight: bold;
 }
 
 .dropdown-body.active {
-	display: block;
+	display: flex;
 }
+
+.dropdown-body p {
+	margin-bottom: .5em;
+}
+
+.dropdown-body span {
+	display: block;
+	margin: 1em 0 0;
+	background-color: black;
+	height: 1px;
+	width: 100%;
+}
+
+.dropdown-body>div:last-child>span {
+	display: none;
+}
+
 
 /* STUDIO STYLES ENDS */
 

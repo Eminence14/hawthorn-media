@@ -7,42 +7,81 @@ import dropArrow from "../assets/images/dropdown-arrow.svg"
 const Studio = () => {
     const studioModal = useRef();
     const title = 'Studio sessions';
+    const [activeIndex, setActiveIndex] = useState(null)
     const bookNow = () => {
         studioModal.current.classList.add('active')
+        setActiveIndex(null)
     }
+
     const [packages, setPackages] = useState([
         {
             title: 'Fashion Photography',
             getting: [
-                `10 profesionally edited pictures (1 outfit)
-                
-                Price-N100,000`,
-                'ipsum', 'donor'
+                {
+                    title: '10 profesionally edited pictures (1 outfit)',
+                    price: 'Price N100,000'
+                },
+                {
+                    title: '20 profesionally edited pictures (10 outfits)',
+                    price: 'Price N200,000'
+                },
+                {
+                    title: '30 profesionally edited pictures (15 outfits)',
+                    price: 'Price N300,000'
+                },
+                {
+                    title: '40 profesionally edited pictures (20 outfits)',
+                    price: 'Price N400,000'
+                },
+                {
+                    title: '50 profesionally edited pictures (25 outfits)',
+                    price: 'Price N500,000'
+                },
             ]
         },
         {
             title: 'Portrait Photography',
             getting: [
-                'lorem', 'ipsum', 'donor'
+                {
+                    title: '10 profesionally edited pictures (1 outfit)',
+                    price: 'Price N100,000'
+                },
+                {
+                    title: '20 profesionally edited pictures (2 outfits)',
+                    price: 'Price N150,000'
+                },
+                {
+                    title: '30 profesionally edited pictures (3 outfits)',
+                    price: 'Price N200,000'
+                },
+                {
+                    title: '40 profesionally edited pictures (4 outfits)',
+                    price: 'Price N250,000'
+                },
+                {
+                    title: '50 profesionally edited pictures (5 outfits)',
+                    price: 'Price N300,000'
+                },
             ]
         },
         {
             title: 'Birthday shoots',
             getting: [
-                'lorem lorem', 'ipsum ipsum', 'donor donor'
+                {
+                    title: '',
+                    price: 'N100,000(Inside)'
+                },
+                {
+                    title: '',
+                    price: 'N150,000(Inside)'
+                }
             ]
         }
     ])
-    function handleClick(e) {
-        // remove the active class from all dropdown elements
-        // const allDropDowns = Array.from(document.querySelectorAll('.dropdown-body'))
-        // allDropDowns.forEach(dropDown => dropDown.classList.remove('active'))
-
-        // add active class to clicked element
-        e.target.parentElement.children[1].classList.toggle('active')
-
-    }
-
+    const handleClick = (index) => {
+        setActiveIndex(index === activeIndex ? null : index);
+    };
+    let dropdown;
 
 
 
@@ -57,36 +96,43 @@ const Studio = () => {
                     </header>
                     <div className="subservice-cards">
                         {
-                            packages.map((pack, id) => (
-                                <div className="subservice-card" key={id}>
-                                    <header>
-                                        <h1 className="package-title">{pack.title}</h1>
-                                    </header>
-                                    <section className="package-body">
-                                        <h2>What you get:</h2>
-
-                                        <div className="dropdown-container">
-                                            <div className="dropdown" onClick={handleClick}>
-                                                <div className="dropdown-head">
+                            packages.map((pack, index1) => {
+                                const isActive = index1 === activeIndex
+                                return (
+                                    <div className="subservice-card" key={index1}>
+                                        <header>
+                                            <h1 className="package-title">{pack.title}</h1>
+                                        </header>
+                                        <section className="package-body">
+                                            <h2>What you get:</h2>
+                                            <div className="dropdown">
+                                                <div className="dropdown-head" onClick={() => handleClick(index1)}>
                                                     Choose package
-                                                    <img src={dropArrow} alt="" />
+                                                    <img src={dropArrow} alt="" className={`drop-arrow ${isActive ? 'active' : ''}`} />
                                                 </div>
-                                                <div className="dropdown-body">
+                                                <div className={`dropdown-body ${isActive ? 'active' : ''}`}>
                                                     {
-                                                        pack.getting.map((option, key) => (
-                                                            <div key={key}>
-                                                                {option}
-                                                            </div>
-                                                        ))
+                                                        dropdown = pack.getting.map(({ title, price }, index2) => {
+                                                            return (
+                                                                <div key={index2}>
+                                                                    <p>{title}</p>
+                                                                    <div>{price}</div>
+                                                                    <span></span>
+                                                                </div>
+                                                            )
+                                                        })
                                                     }
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </section>
 
-                                    <button className="button" onClick={bookNow}>Book Now</button>
-                                </div>
-                            ))
+                                            </div>
+
+
+                                        </section>
+
+                                        <button className="button" onClick={bookNow}>Book Now</button>
+                                    </div>
+                                )
+                            })
                         }
                     </div>
                 </div>
@@ -96,7 +142,7 @@ const Studio = () => {
                     }}></div>
                     <div className="modal-content">
                         <p>
-                            Furthermore all makeup and set design prices are not included in the photography cost but we have secured discount with make up artist like bookie lavida, Jide of st. Ola, Ronald 07th and LBV makeovers.
+                            Furthermore all makeup and set design prices aPrice re not included in the photography cost but we have secured discount with make up artist like bookie lavida, Jide of st. Ola, Ronald 07th and LBV makeovers.
                         </p>
                         <Link to='/detail'>Continue</Link>
                     </div>
