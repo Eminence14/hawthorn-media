@@ -11,14 +11,11 @@ import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { useLayoutEffect } from "react";
 import Logo from '../assets/images/Hawthorn Studios Yellow.png';
 import FAQ from "./Faqs";
 
 const Home = () => {
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    window.scrollTo(0, 0)
     const questions = [
         {
             title: 'WILL THE FILMING GET IN THE WAY OF THE WEDDING?',
