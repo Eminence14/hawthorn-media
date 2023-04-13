@@ -417,10 +417,12 @@ section.faqs {
 	margin: 8em 1.2em 3em;
 	color: var(--secondary);
 	text-align: center;
+	font-size: .8rem;
 }
 
+
 .faqs .head {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	margin-bottom: 1em;
 }
 
@@ -434,7 +436,7 @@ section.faqs {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: .7em;
+	padding: .5em;
 	cursor: pointer;
 	background-color: var(--secondary);
 	color: var(--primary);
@@ -457,17 +459,21 @@ img.drop-arrow.active {
 
 .question-header h3 {
 	margin: 0;
+	line-height: 1.4em;
+	font-size: .8rem;
 }
 
 
 .question-content {
 	padding: 1em;
-	background-color: rgba(255, 255, 255, 0.05);
+	background-color: rgba(255, 255, 255, .95);
+	color: var(--primary);
 	border-radius: 0 0 5px 5px;
 	transform: translateY(-100px);
 	display: none;
 	text-align: justify;
-	line-height: 1.3em;
+	line-height: 1.5em;
+	font-size: .9rem;
 }
 
 .question-content.active {
@@ -880,7 +886,7 @@ footer .bottom .left {
 	background-color: var(--primary);
 	color: white;
 	padding: 0 0 50px 1em;
-	height: 100svh;
+	height: 100dvh;
 	position: relative;
 }
 
@@ -1900,7 +1906,7 @@ header.details-header {
 
 .clients-container .clients-img img {
 	width: 100%;
-	max-width: 20%;
+	max-width: 80px;
 }
 
 .clients-container .client-footer {
@@ -1913,8 +1919,8 @@ header.details-header {
 	z-index: 1;
 	top: 50%;
 	left: 1%;
-	width: 80px;
-	height: 100px;
+	width: 90px;
+	height: 150px;
 	transform: translateY(-50%);
 }
 

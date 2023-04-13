@@ -4,13 +4,10 @@ import ActiveBook from '../assets/images/active-booking.svg';
 import CompleteBook from '../assets/images/completed-booking.svg';
 import TotalBook from '../assets/images/total-booking.svg';
 import { Link } from "react-router-dom";
-import { useLayoutEffect } from "react";
 
 
 const Dashboard = () => {
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    window.scrollTo(0, 0)
     return (
         <div className="tablet">
             <AccNavbar className='tablet-nav' />
@@ -44,7 +41,7 @@ const Dashboard = () => {
                     <p>
                         We offers various services which includes Photoshoots, Videography, Studio sessions etc. You can also request for a custom quote.
                     </p>
-                    <Link to='/booking'>Start Booking</Link>
+                    <Link to='/services'>Start Booking</Link>
                 </div>
             </div>
             <Footer className='' />

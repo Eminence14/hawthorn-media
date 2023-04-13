@@ -88,7 +88,7 @@ const Home = () => {
                     <p>
                         Creating Timeless Moments. Capturing <span> Luxury </span> in Every Frame.
                     </p>
-                    <Link to='/booking'>
+                    <Link to='/register'>
                         <button>Book Us Now</button>
                     </Link>
                 </section>

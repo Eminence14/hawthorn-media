@@ -425,9 +425,10 @@
     footer {
         grid-area: footer;
     }
-
-
-
+.clients-container .client-footer>img{
+    width: 250px;
+    height: 300px;
+}
     /* ACCOUNT PAGES ENDS HERE */
 
 }
@@ -725,7 +726,10 @@
 
 
     /* clients page start */
-    
+    .clients-container .clients-img img {
+        max-width: 100px;
+    }
+
     /* clients page end */
 
     /* Dashboard styles begins */

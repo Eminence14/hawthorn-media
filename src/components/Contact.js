@@ -5,6 +5,7 @@ import Email from "../assets/images/email.svg";
 import Location from "../assets/images/location.svg";
 import Map from "../assets/images/map.svg";
 import { useLayoutEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
     function handleSubmit(e) {
@@ -23,7 +24,7 @@ const Contact = () => {
                 <p>
                     Get in touch with our customer representative if any challenge.
                 </p>
-                <button className="button">Contact Us</button>
+                <Link to='tel:+2347056682385' className="button">Contact Us</Link>
             </div>
             <div className="contact_us">
                 <div>
